@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+@import 'layout';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: $background-color;
+  font-family: $main-font;
+  color: $font-color;
+}
+
+.main-page {
+  padding: 10px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 7px 5px #e0e0e0;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  line-height: 25px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
