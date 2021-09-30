@@ -2,6 +2,7 @@ import Head from 'next/head'
 import stylesHome from '../styles/Home.module.scss';
 
 export default function Home() {
+  
   return (
     <div>
       <Head>
@@ -45,3 +46,4 @@ export default function Home() {
     </div>
   )
 }
+

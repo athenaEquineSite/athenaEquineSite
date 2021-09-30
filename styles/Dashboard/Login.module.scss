@@ -1,0 +1,31 @@
+@import '../Global/variables';
+
+.login {
+  min-width: 400px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px 5px $container-background;
+    padding: 10px;
+    label {
+      margin: 15px;
+      padding: 10px;
+    }
+    input {
+      margin: 15px;
+      padding: 10px;
+    }
+    button {
+      width: 75%;
+      background-color: rgb(131, 171, 245);
+      margin: 20px;
+      padding: 15px;
+    }
+  }
+}
