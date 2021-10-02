@@ -1,5 +1,8 @@
 import stylesLogin from '../../styles/Dashboard/Login.module.scss';
 import { useRouter } from 'next/router';
+import { verify } from 'jsonwebtoken';
+import User from '../../models/User';
+import dbConnect from '../../utils/dbConnect';
 
 const Login = () => {
 
@@ -43,12 +46,18 @@ const Login = () => {
 }
 
 export const getServerSideProps = async (ctx) => {
+    await dbConnect();
     const {auth} = ctx.req.cookies;
+
     if(auth) {
-        return {
-            redirect: {
-                destination: '/aeas/dashboard',
-                permanent: false
+        const match = await verify(auth, process.env.JWT_SECRET);
+        const user = await User.findOne({userId: match.sub});
+        if(user) {
+            return {
+                redirect: {
+                    destination: '/aeas/dashboard',
+                    permanent: false
+                }
             }
         }
     }

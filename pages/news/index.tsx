@@ -1,15 +1,16 @@
-import PostList from '../components/PostList';
+import NewsList from '../../components/NewsList';
+
 const news = ({posts}) => {
     
     return (
         <div>
-            <PostList posts={posts} />
+            <NewsList posts={posts} />
         </div>
     )
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
+    const res = await fetch(`http://localhost:3000/api/posts`)
     const posts = await res.json()
   
     return {
