@@ -1,6 +1,5 @@
 import { connect } from 'mongoose';
 
-
 let uri = process.env.MONGO_URI
 
 let cachedClient = null
@@ -12,28 +11,17 @@ if (!uri) {
 }
 
 const dbConnect = async () => {
-/*
-    try {
-        await connect(process.env.MONGO_URI, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true
-        });
-        console.log('MongoDB connected.');
-    }
-    catch(err) {
-        console.log(err.message);
-    }
-    */
-
     if (cachedClient) {
         console.log('Cashed connection')
         return cachedClient 
       }
     
-      const client = await connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+const connectOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}
+
+      const client = await connect(uri);
         
       cachedClient = client
     
