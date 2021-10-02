@@ -1,3 +1,5 @@
+import { server } from '../../utils/env';
+
 const news = ({news}) => {
     return (
         <div>
@@ -8,7 +10,7 @@ const news = ({news}) => {
 }
 
 export const getStaticProps = async (context) => {
-    const res = await fetch(`http://localhost:3000/api/posts/${context.params.id}`);
+    const res = await fetch(`${server}/api/posts/${context.params.id}`);
 
     const news = await res.json();
 
@@ -20,7 +22,7 @@ export const getStaticProps = async (context) => {
 } 
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`http://localhost:3000/api/posts`);
+    const res = await fetch(`${server}/api/posts`);
 
     const newses = await res.json();
 

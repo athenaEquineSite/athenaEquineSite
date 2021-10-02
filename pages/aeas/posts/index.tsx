@@ -1,8 +1,9 @@
 import PostList from '../../../components/PostList';
+import { server } from '../../../utils/env';
 
 const posts = ({posts}) => {
 
-    // paginacja na wszystkie posty w PostList
+    // paginacja na wszystkie posty w PostList, zmiana adresu url w każdym fetch(zamiast localhost ustawic wedlug development i production zmienna)
     return (
         <div>
             <PostList posts={posts}/>
@@ -11,7 +12,7 @@ const posts = ({posts}) => {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`http://localhost:3000/api/posts`);
+    const res = await fetch(`${server}/api/posts`);
     const posts = await res.json();
 
     return {

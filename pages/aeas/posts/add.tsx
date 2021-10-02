@@ -1,8 +1,9 @@
+import { server } from '../../../utils/env';
 
 const AddPost = () => {
     const handleForm = async (event) => {
         event.preventDefault();
-        const addPost = await fetch('http://localhost:3000/api/posts/add', {
+        const addPost = await fetch(`${server}/api/posts/add`, {
             body: JSON.stringify({
                 title: event.target.title.value,
                 body: event.target.body.value

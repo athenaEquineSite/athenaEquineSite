@@ -4,12 +4,13 @@ import dbConnect from '../../utils/dbConnect';
 import User from '../../models/User';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { server } from '../../utils/env';
 
 const Dashboard = ({test}) => {
     const router = useRouter();
 
     const logOut = async () => {
-        await fetch('http://localhost:3000/api/logout', { method: "POST" });
+        await fetch(`${server}/api/logout`, { method: "POST" });
         router.push('/aeas');
     }
 

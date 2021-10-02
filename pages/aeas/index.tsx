@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { verify } from 'jsonwebtoken';
 import User from '../../models/User';
 import dbConnect from '../../utils/dbConnect';
+import { server } from '../../utils/env';
 
 const Login = () => {
 
@@ -11,7 +12,7 @@ const Login = () => {
     const loginUser = async (event) => {
         event.preventDefault();
 
-        const res = await fetch('http://localhost:3000/api/login', {
+        const res = await fetch(`${server}/api/login`, {
             body: JSON.stringify({
                 username: event.target.username.value,
                 password: event.target.password.value
