@@ -10,7 +10,7 @@ function PostPage({post}) {
     )
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
     await dbConnect();
 
     const post = await Post.findOne({postId: context.params.id});
@@ -22,19 +22,5 @@ export const getStaticProps = async (context) => {
         }
     }
 } 
-
-export const getStaticPaths = async () => {
-    await dbConnect();
-    const posts = await Post.find({});
-    const postss = await JSON.parse(JSON.stringify(posts))
-
-    const ids = postss.map(post => post.postId);
-    const paths = ids.map(id => ({params: {id: id.toString()}}))
-
-    return {
-        paths,
-        fallback: false
-    }
-}
 
 export default PostPage;
