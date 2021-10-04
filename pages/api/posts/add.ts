@@ -16,7 +16,7 @@ export default async function addPost(req: NextApiRequest, res: NextApiResponse)
 
         const postToDb = await Post.create(newPost);
 
-        res.status(200).json(postToDb);
+        return res.status(200).json(postToDb);
     }
     return res.status(405).json({message: "Only POST method accepted."});
 }

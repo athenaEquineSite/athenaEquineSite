@@ -4,7 +4,7 @@ import dbConnect from '../../utils/dbConnect';
 import User from '../../models/User';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { server } from '../../utils/env';
+import { server, jwtSecret } from '../../utils/env';
 
 function Dashboard() {
     const router = useRouter();
@@ -66,7 +66,7 @@ export const getServerSideProps = async (ctx) => {
             }
         }
     }
-    const match = await verify(auth, process.env.JWT_SECRET);
+    const match = await verify(auth, jwtSecret);
     const user = await User.findOne({userId: match.sub});
     if(!user) {
         return {

@@ -4,6 +4,7 @@ import User from '../../models/User';
 import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 import cookie from 'cookie';
+import { jwtSecret } from '../../utils/env';
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
 
@@ -22,7 +23,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
 
     if (match) {
       const claims = { sub: searchedUser.userId }
-      const jwt = sign(claims, process.env.JWT_SECRET, { expiresIn: '1h' });
+      const jwt = sign(claims, jwtSecret, { expiresIn: '1h' });
 
       res.setHeader('Set-Cookie', cookie.serialize('auth', jwt, {
         httpOnly: true,

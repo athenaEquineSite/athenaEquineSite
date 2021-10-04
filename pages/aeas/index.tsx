@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { verify } from 'jsonwebtoken';
 import User from '../../models/User';
 import dbConnect from '../../utils/dbConnect';
-import { server } from '../../utils/env';
+import { server, jwtSecret } from '../../utils/env';
 
 function Login() {
 
@@ -50,7 +50,7 @@ export const getServerSideProps = async (ctx) => {
     const {auth} = ctx.req.cookies;
 
     if(auth) {
-        const match = await verify(auth, process.env.JWT_SECRET);
+        const match = await verify(auth, jwtSecret);
         const user = await User.findOne({userId: match.sub});
         if(!user) alert('User not found.')
         if(user) {
