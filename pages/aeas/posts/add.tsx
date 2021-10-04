@@ -18,7 +18,6 @@ function AddPost() {
             },
             method: 'POST'
         });
-        const result = await addPost.json();
         router.push('/aeas/dashboard');
     }
     return (
