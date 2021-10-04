@@ -1,5 +1,4 @@
 import { server } from '../../../utils/env';
-import dbConnect from '../../../utils/dbConnect';
 import { useRouter } from 'next/router'
 
 function AddPost() {
