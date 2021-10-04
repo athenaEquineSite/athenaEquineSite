@@ -11,7 +11,6 @@ function Dashboard() {
 
     const logOut = async () => {
         const res = await fetch(`${server}/api/logout`, { method: "POST" });
-        const result = await res.json();
         router.push('/aeas');
     }
 
