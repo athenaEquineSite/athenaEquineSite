@@ -1,6 +1,6 @@
 import PostList from '../../../components/PostList';
-import { server } from '../../../utils/env';
 import dbConnect from '../../../utils/dbConnect';
+import Post from '../../../models/Post';
 
 function Posts({posts}) {
 
@@ -14,12 +14,12 @@ function Posts({posts}) {
 
 export const getStaticProps = async () => {
     await dbConnect();
-    const res = await fetch(`${server}/api/posts`);
-    const posts = await res.json();
+    const posts = await Post.find({});
+    const post = JSON.parse(JSON.stringify(posts));
 
     return {
         props: {
-            posts
+            posts: post
         }
     }
 } 

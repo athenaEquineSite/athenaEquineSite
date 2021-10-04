@@ -1,7 +1,7 @@
-import { server } from '../../../../utils/env';
 import dbConnect from '../../../../utils/dbConnect';
+import Post from '../../../../models/Post';
 
-function Post({post}) {
+function PostPage({post}) {
     return (
         <div>
             <h1>{post.title}</h1>
@@ -12,24 +12,23 @@ function Post({post}) {
 
 export const getStaticProps = async (context) => {
     await dbConnect();
-    const res = await fetch(`${server}/api/posts/${context.params.id}`);
 
-    const post = await res.json();
+    const post = await Post.findOne({postId: context.params.id});
+    const posts = await JSON.parse(JSON.stringify(post));
 
     return {
         props: {
-            post
+            post: posts
         }
     }
 } 
 
 export const getStaticPaths = async () => {
     await dbConnect();
-    const res = await fetch(`${server}/api/posts`);
+    const posts = await Post.find({});
+    const postss = await JSON.parse(JSON.stringify(posts))
 
-    const posts = await res.json();
-
-    const ids = posts.map(post => post.postId);
+    const ids = postss.map(post => post.postId);
     const paths = ids.map(id => ({params: {id: id.toString()}}))
 
     return {
@@ -38,4 +37,4 @@ export const getStaticPaths = async () => {
     }
 }
 
-export default Post;
+export default PostPage;

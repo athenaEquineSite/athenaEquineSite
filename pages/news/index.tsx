@@ -1,24 +1,24 @@
 import NewsList from '../../components/NewsList';
-import { server } from '../../utils/env';
 import dbConnect from '../../utils/dbConnect';
+import Post from '../../models/Post';
 
-function Newses({posts}) {
+function Newses({news}) {
     
     return (
         <div>
-            <NewsList posts={posts} />
+            <NewsList posts={news} />
         </div>
     )
 }
 
 export const getStaticProps = async () => {
   await dbConnect();
-    const res = await fetch(`${server}/api/posts`)
-    const posts = await res.json()
+  const posts = await Post.find({});
+  const news = JSON.parse(JSON.stringify(posts))
   
     return {
       props: {
-        posts
+        news: news
       }
     }
   }

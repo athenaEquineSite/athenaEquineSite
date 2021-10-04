@@ -6,6 +6,6 @@ const PostSchema = new Schema({
     body: {type: String, required: true},
     date: {type: Date, required: true}
 });
-
+PostSchema.set('toJSON', {virtuals: true});
 const Post = mongoose.models.Post || mongoose.model('Post', PostSchema);
 export default Post;

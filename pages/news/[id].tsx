@@ -1,6 +1,5 @@
-import { server } from '../../utils/env';
 import dbConnect from '../../utils/dbConnect';
-import useEffect from 'react';
+import Post from '../../models/Post';
 
 function News({news}) {
     return (
@@ -13,24 +12,22 @@ function News({news}) {
 
 export const getStaticProps = async (context) => {
     await dbConnect();
-    const res = await fetch(`${server}/api/posts/${context.params.id}`);
-
-    const news = await res.json();
-
+    const post = await Post.findOne({postId: context.params.id});
+    const news = await JSON.parse(JSON.stringify(post));
+    
     return {
         props: {
-            news
+            news: news
         }
     }
 } 
 
 export const getStaticPaths = async () => {
     await dbConnect();
-    const res = await fetch(`${server}/api/posts`);
-
-    const newses = await res.json();
-
-    const ids = newses.map(news => news.postId);
+    const posts = await Post.find({});
+    const news = JSON.parse(JSON.stringify(posts));
+    
+    const ids = news.map(news => news.postId);
     const paths = ids.map(id => ({params: {id: id.toString()}}))
 
     return {

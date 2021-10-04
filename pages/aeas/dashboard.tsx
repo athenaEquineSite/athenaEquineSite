@@ -6,12 +6,12 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { server } from '../../utils/env';
 
-function Dashboard({test}) {
+function Dashboard() {
     const router = useRouter();
 
     const logOut = async () => {
-        await dbConnect();
-        await fetch(`${server}/api/logout`, { method: "POST" });
+        const res = await fetch(`${server}/api/logout`, { method: "POST" });
+        const result = await res.json();
         router.push('/aeas');
     }
 

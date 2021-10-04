@@ -1,10 +1,13 @@
 import { server } from '../../../utils/env';
 import dbConnect from '../../../utils/dbConnect';
+import { useRouter } from 'next/router'
 
 function AddPost() {
+
+    const router = useRouter();
+
     const handleForm = async (event) => {
         event.preventDefault();
-        await dbConnect();
         const addPost = await fetch(`${server}/api/posts/add`, {
             body: JSON.stringify({
                 title: event.target.title.value,
@@ -16,6 +19,7 @@ function AddPost() {
             method: 'POST'
         });
         const result = await addPost.json();
+        router.push('/aeas/dashboard');
     }
     return (
         <div>

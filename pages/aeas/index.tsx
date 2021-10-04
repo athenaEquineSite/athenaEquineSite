@@ -11,7 +11,6 @@ function Login() {
 
     const loginUser = async (event) => {
         event.preventDefault();
-        await dbConnect();
         const res = await fetch(`${server}/api/login`, {
             body: JSON.stringify({
                 username: event.target.username.value,
@@ -53,6 +52,7 @@ export const getServerSideProps = async (ctx) => {
     if(auth) {
         const match = await verify(auth, process.env.JWT_SECRET);
         const user = await User.findOne({userId: match.sub});
+        if(!user) alert('User not found.')
         if(user) {
             return {
                 redirect: {
