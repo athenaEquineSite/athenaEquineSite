@@ -1,6 +1,8 @@
 import { server } from '../../utils/env';
+import dbConnect from '../../utils/dbConnect';
+import useEffect from 'react';
 
-const news = ({news}) => {
+function News({news}) {
     return (
         <div>
             <h1>{news.title}</h1>
@@ -10,6 +12,7 @@ const news = ({news}) => {
 }
 
 export const getStaticProps = async (context) => {
+    await dbConnect();
     const res = await fetch(`${server}/api/posts/${context.params.id}`);
 
     const news = await res.json();
@@ -22,6 +25,7 @@ export const getStaticProps = async (context) => {
 } 
 
 export const getStaticPaths = async () => {
+    await dbConnect();
     const res = await fetch(`${server}/api/posts`);
 
     const newses = await res.json();
@@ -35,4 +39,4 @@ export const getStaticPaths = async () => {
     }
 }
 
-export default news;
+export default News;

@@ -1,7 +1,8 @@
 import NewsList from '../../components/NewsList';
 import { server } from '../../utils/env';
+import dbConnect from '../../utils/dbConnect';
 
-const news = ({posts}) => {
+function Newses({posts}) {
     
     return (
         <div>
@@ -11,6 +12,7 @@ const news = ({posts}) => {
 }
 
 export const getStaticProps = async () => {
+  await dbConnect();
     const res = await fetch(`${server}/api/posts`)
     const posts = await res.json()
   
@@ -21,4 +23,4 @@ export const getStaticProps = async () => {
     }
   }
 
-export default news;
+export default Newses;

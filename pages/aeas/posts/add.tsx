@@ -1,8 +1,10 @@
 import { server } from '../../../utils/env';
+import dbConnect from '../../../utils/dbConnect';
 
-const AddPost = () => {
+function AddPost() {
     const handleForm = async (event) => {
         event.preventDefault();
+        await dbConnect();
         const addPost = await fetch(`${server}/api/posts/add`, {
             body: JSON.stringify({
                 title: event.target.title.value,

@@ -1,7 +1,8 @@
 import PostList from '../../../components/PostList';
 import { server } from '../../../utils/env';
+import dbConnect from '../../../utils/dbConnect';
 
-const posts = ({posts}) => {
+function Posts({posts}) {
 
     // paginacja na wszystkie posty w PostList, zmiana adresu url w każdym fetch(zamiast localhost ustawic wedlug development i production zmienna)
     return (
@@ -12,6 +13,7 @@ const posts = ({posts}) => {
 }
 
 export const getStaticProps = async () => {
+    await dbConnect();
     const res = await fetch(`${server}/api/posts`);
     const posts = await res.json();
 
@@ -22,4 +24,4 @@ export const getStaticProps = async () => {
     }
 } 
 
-export default posts;
+export default Posts;

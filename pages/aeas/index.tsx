@@ -5,13 +5,13 @@ import User from '../../models/User';
 import dbConnect from '../../utils/dbConnect';
 import { server } from '../../utils/env';
 
-const Login = () => {
+function Login() {
 
     const router = useRouter();
 
     const loginUser = async (event) => {
         event.preventDefault();
-
+        await dbConnect();
         const res = await fetch(`${server}/api/login`, {
             body: JSON.stringify({
                 username: event.target.username.value,

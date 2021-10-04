@@ -1,1 +1,1 @@
-export const server = process.env.NODE_ENV !== 'development' ? 'https://stadninanxt-gpfxpig98-maciejderewianski-oneteu.vercel.app' : 'http://localhost:3000';
+export const server = process.env.NODE_ENV !== 'development' ? 'http://localhost:3000' : 'http://localhost:3000';

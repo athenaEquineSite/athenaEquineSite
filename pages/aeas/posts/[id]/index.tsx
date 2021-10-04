@@ -1,6 +1,7 @@
 import { server } from '../../../../utils/env';
+import dbConnect from '../../../../utils/dbConnect';
 
-const post = ({post}) => {
+function Post({post}) {
     return (
         <div>
             <h1>{post.title}</h1>
@@ -10,6 +11,7 @@ const post = ({post}) => {
 }
 
 export const getStaticProps = async (context) => {
+    await dbConnect();
     const res = await fetch(`${server}/api/posts/${context.params.id}`);
 
     const post = await res.json();
@@ -22,6 +24,7 @@ export const getStaticProps = async (context) => {
 } 
 
 export const getStaticPaths = async () => {
+    await dbConnect();
     const res = await fetch(`${server}/api/posts`);
 
     const posts = await res.json();
@@ -35,4 +38,4 @@ export const getStaticPaths = async () => {
     }
 }
 
-export default post;
+export default Post;
