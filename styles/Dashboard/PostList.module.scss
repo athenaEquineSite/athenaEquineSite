@@ -1,0 +1,22 @@
+@import '../Global/variables';
+
+.postList {
+  padding: 10px;
+  margin: 5px;
+  button {
+    cursor: pointer;
+  }
+}
+.post {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+.editPost {
+  text-decoration: none;
+  color: $font-color;
+  cursor: pointer;
+  border: 1px solid $font-color;
+  margin: 10px;
+}

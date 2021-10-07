@@ -19,7 +19,7 @@ function Dashboard() {
             <div className={`col-1`}>
                 <button onClick={logOut}>Log Out</button>
             </div>
-            <div className={`${stylesDash.postContainer} col-3`}>
+            <div className={`${stylesDash.postGallContainer} col-5`}>
                 <h2>POSTS</h2>
                 <Link href="/aeas/posts">
                     <a>View Posts</a>
@@ -28,24 +28,12 @@ function Dashboard() {
                     <a>Create</a>
                 </Link>
             </div>
-            <div className={`${stylesDash.galleriesContainer} col-3 row`}>
-                <h2 className={`col-4`}>Stable1 Gallery</h2>
-                <div className={`col-8`}>
-                    <Link href="/aeas/galleries/stable1">
-                        <a>View</a>
-                    </Link>
-                    <Link href="/aeas/galleries/stable1/add">
-                        <a>Add</a>
-                    </Link>
-                </div>
-
-            </div>
-            <div className={`${stylesDash.galleriesContainer} col-3`}>
-            <h2>Stable2 Gallery</h2>
-                <Link href="/aeas/galleries/stable2">
+            <div className={`${stylesDash.postGallContainer} col-5`}>
+                <h2>Galleries</h2>
+                <Link href="/aeas/galleries">
                     <a>View</a>
                 </Link>
-                <Link href="/aeas/galleries/stable2/add">
+                <Link href="/aeas/galleries/add">
                     <a>Add</a>
                 </Link>
             </div>
@@ -57,7 +45,7 @@ export const getServerSideProps = async (ctx) => {
     await dbConnect();
     
     const {auth} = ctx.req.cookies;
-    
+
     if(!auth) {
         return {
             redirect: {
@@ -76,6 +64,7 @@ export const getServerSideProps = async (ctx) => {
             }
         }
     }
+    
     return {
         props: {
             test: 2

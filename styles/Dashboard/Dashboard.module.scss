@@ -14,20 +14,10 @@
   }
 }
 
-.postContainer {
+.postGallContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid white;
-}
-
-.galleriesContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
   padding: 10px;
   margin: 5px;
   border: 1px solid white;

@@ -18,7 +18,6 @@ export const Nav = () => {
                         <Link href="/stable1/about" passHref><p>About</p></Link>
                         <Link href="/stable1/offer" passHref><p>Offer</p></Link>
                         <Link href="/stable1/gallery" passHref><p>Gallery</p></Link>
-                        <Link href="/stable1/pricing" passHref><p>Pricing</p></Link>
                     </div>
                 </div>
                 <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
@@ -27,7 +26,6 @@ export const Nav = () => {
                         <Link href="/stable2/about" passHref><p>About</p></Link>
                         <Link href="/stable2/offer" passHref><p>Offer</p></Link>
                         <Link href="/stable2/gallery" passHref><p>Gallery</p></Link>
-                        <Link href="/stable2/pricing" passHref><p>Pricing</p></Link>
                     </div>
                 </div>
                 <div className={`${navStyles.menuItem} col-2`}>

@@ -1,5 +1,8 @@
 import { server } from '../../../utils/env';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { verify } from 'jsonwebtoken';
+import { jwtSecret } from '../../../utils/env';
+import User from '../../../models/User';
 
 function AddPost() {
 
@@ -26,12 +29,39 @@ function AddPost() {
                 <input type="text" id="title" name="title" required/>
                 
                 <label htmlFor="body">Body: </label>
-                <textarea id="body" name="body" cols={30} rows={10} placeholder="Type post body ..."></textarea>
+                <textarea id="body" name="body" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
                 
                 <button type="submit">Submit Post</button>
             </form>
         </div>
     )
+}
+
+export const getServerSideProps = async (context) => {
+    const {auth} = context.req.cookies;
+
+    if(!auth) {
+        return {
+            redirect: {
+                destination: '/aeas',
+                permanent: false
+            }
+        }
+    }
+    const match = await verify(auth, jwtSecret);
+    const user = await User.findOne({userId: match.sub});
+    if(!user) {
+        return {
+            redirect: {
+                destination: '/aeas',
+                permanent: false
+            }
+        }
+    }
+
+    return {
+        props: {}
+    }
 }
 
 export default AddPost;
