@@ -7,3 +7,4 @@ cloudinary.config({
 })
 
 export const cloudinaryUpload = (file, folderName) => cloudinary.uploader.upload(file, {folder: folderName});
+export const cloudinaryDelete = async (id) => await cloudinary.uploader.destroy(id);

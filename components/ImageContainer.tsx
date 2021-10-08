@@ -1,8 +1,13 @@
+import Picture from './Picture';
 
-
-const ImageContainer = () => {
+const ImageContainer = ({images, handleDelete}) => {
     return (
-        <div></div>
+        <div>
+            {images.map((image) => (
+                <Picture key={image.id} handleDelete={handleDelete} image={image}/>
+            )
+        )}
+        </div>
     )
 }
 
