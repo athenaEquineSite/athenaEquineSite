@@ -4,7 +4,7 @@ import { jwtSecret, server } from '../../../utils/env';
 import User from '../../../models/User';
 import ImageSt1 from '../../../models/ImageSt1';
 import ImageSt2 from '../../../models/ImageSt2';
-import ImageContainer from '../../../components/ImageContainer';
+import ImageContainer from '../../../components/dashboard/ImageContainer';
 
 export default function Gallery({stable1Img, stable2Img}) {
 
