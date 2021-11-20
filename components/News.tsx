@@ -5,7 +5,7 @@ const News = ({news}) => {
         <Link href="/news/[id]" as={`/news/${news.postId}`}>
             <a>
                 <h3>{news.title}</h3>
-                <p>{news.body}</p>
+                <p>{(news.body).length > 100 ? news.body.substr(0, 100) + '...' : news.body}</p>
             </a>
         </Link>
     )

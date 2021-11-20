@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Image from 'next/image';
 import stylesHome from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -11,8 +12,9 @@ export default function Home() {
         <title>ATHENA EQUINE AS</title>
       </Head>
       <div className={stylesHome.home}>
-        <h1 className={stylesHome.companyName}>ATHENA EQUINE AS</h1>
-        <div className={stylesHome.companyPicture}>Team picture</div>
+        <div className={stylesHome.companyPicture}>
+          <img src="https://image.freepik.com/free-vector/group-people-posing-photo_23-2148217915.jpg" />
+        </div>
         <h3 className={stylesHome.companyMotto}>A company created by horses enthusiasts for horses enthusiasts.</h3>
         <div className={stylesHome.companyDescription}>
             <p>The origins of Athena Equine do not go far back in time. Two founders of the idea met in september 2020 for a short interview. Ended up talking for several hours about the same visions and dreams how to improve the horse care and services in the area of Indre Ostfold. This company was created to provide the best care and service for horses and their owners and riders. The strongest suit of our team is that we combine expierience from variuos equine environments, dressage, jumping, eventing or even long distance racing, breeding and livery yards. </p>
@@ -21,24 +23,25 @@ export default function Home() {
             <p>With all that combined, we put all the effort in making sure that your horse has the best life possible at our yards.</p>
         </div>
         <div className={`row ${stylesHome.employees}`}>
-            <div className={`${stylesHome.employee} col-3`}>
+            <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Elisabeth Hernes</h4>
-                <div className={stylesHome.employeePhotoContainer}></div>
+                <div className={stylesHome.employeePhotoContainer}>
+                  <img src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"/>
+                </div>
                 <p className={stylesHome.employeeDescription}>multitalented founder of the company, show jumper who brings her lifelong expierience in all the aspects of running a safe and succesful horse yard.</p>
             </div>
-            <div className={`${stylesHome.employee} col-3`}>
+            <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Kamila Derewianska</h4>
-                <div className={stylesHome.employeePhotoContainer}></div>
+                <div className={stylesHome.employeePhotoContainer}>
+                  <img src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"/>
+                </div>
                 <p className={stylesHome.employeeDescription}>partner in crime for Elisabeth, bringing in over 30 years of horse life in managing different kinds of yards, stables and yards; show jumper with a hint of eventing in her soul.</p>
             </div>
-            <div className={`${stylesHome.employee} col-3`}>
-                <h4 className={stylesHome.employeeName}>Monika Januchowska</h4>
-                <div className={stylesHome.employeePhotoContainer}></div>
-                <p className={stylesHome.employeeDescription}>our teammate who runs the show on the weekends and jumps in whenever there is an emergency, with loads of love for horses and fondness of having things running smoothly and in order, she is the best completion to the team of Athena.</p>
-            </div>
-            <div className={`${stylesHome.employee} col-3`}>
+            <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Anine Aarum Teig</h4>
-                <div className={stylesHome.employeePhotoContainer}></div>
+                <div className={stylesHome.employeePhotoContainer}>
+                  <img src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"/>
+                </div>
                 <p className={stylesHome.employeeDescription}>the youngest team member, grew up with horses; Anine is having the team&apos;s back with every task that is given to her, either it is every day stable work or fencing the fields; Athena is proud to see her grow and develop in all the sides of the horse life.</p>
             </div>
         </div>

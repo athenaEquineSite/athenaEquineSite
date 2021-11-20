@@ -3,10 +3,11 @@ import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
 
 function Newses({news}) {
-    
+
+   
     return (
         <div>
-            <NewsList posts={news} />
+            <NewsList posts={news}/>
         </div>
     )
 }

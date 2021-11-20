@@ -1,0 +1,51 @@
+@import '../Global/variables';
+
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: roll-down 0.2s ease-in;
+
+  .image {
+    visibility: visible;
+    z-index: 101;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  bottom: 90%;
+
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+@keyframes roll-down {
+  0% {
+    top: -50%;
+  }
+  50% {
+    top: -20%;
+  }
+  100% {
+    top: 0;
+  }
+}

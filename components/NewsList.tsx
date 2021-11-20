@@ -3,7 +3,7 @@ const NewsList = ({posts}) => {
     return (
         <div>
         {posts.map((post) => (
-            <News key={post.postId} news={post} />
+            <News key={post.postId} news={post}/>
         ))}
         </div>
     )

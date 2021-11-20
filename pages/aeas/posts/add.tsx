@@ -12,8 +12,15 @@ function AddPost() {
         event.preventDefault();
         const addPost = await fetch(`${server}/api/posts/add`, {
             body: JSON.stringify({
-                title: event.target.title.value,
-                body: event.target.body.value
+                en: {
+                    title: event.target.titleEn.value,
+                    body: event.target.bodyEn.value
+                },
+                no: {
+                    title: event.target.titleNo.value,
+                    body: event.target.bodyNo.value
+                }
+                
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -25,11 +32,21 @@ function AddPost() {
     return (
         <div>
             <form onSubmit={handleForm}>
-                <label htmlFor="title">Title: </label>
-                <input type="text" id="title" name="title" required/>
+                <div>
+                    <label htmlFor="titleEn">Title: </label>
+                    <input type="text" id="titleEn" name="titleEn" required/>
+                    
+                    <label htmlFor="bodyEn">Body: </label>
+                    <textarea id="bodyEn" name="bodyEn" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
+                </div>
+                <div>
+                <label htmlFor="titleNo">Title: </label>
+                <input type="text" id="titleNo" name="titleNo" required/>
                 
-                <label htmlFor="body">Body: </label>
-                <textarea id="body" name="body" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
+                <label htmlFor="bodyNo">Body: </label>
+                <textarea id="bodyNo" name="bodyNo" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
+                </div>
+
                 
                 <button type="submit">Submit Post</button>
             </form>

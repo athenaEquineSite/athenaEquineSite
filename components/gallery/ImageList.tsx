@@ -1,10 +1,15 @@
+import styles from '../../styles/Gallery/Gallery.module.scss';
 import PictureGallery from './PictureGallery';
+
 
 const ImageList = ({images}) => {
     return (
-        <div>
+        <div className={`${styles.imageList}`}>
             {images.map((image) => (
-                <PictureGallery key={image.id} image={image}/>
+                <div key={image.id} className={`${styles.imageItem}`}>
+                    <PictureGallery image={image}/>
+                </div>
+                
             )
         )}
         </div>

@@ -1,0 +1,43 @@
+.galleryContainer {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  .imageList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px 400px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    .imageItem {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &:hover {
+        .image {
+          img {
+            transform: scale(1.5);
+          }
+        }
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 50%;
+          cursor: pointer;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .galleryContainer .imageList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,3 +1,4 @@
+import styles from '../../styles/Gallery/Gallery.module.scss';
 import ImageSt2 from "../../models/ImageSt2";
 import { useState } from 'react';
 import dbConnect from "../../utils/dbConnect";
@@ -6,11 +7,11 @@ import ImageList from '../../components/gallery/ImageList';
 const Stable2Gallery = ({stable2Img}) => {
 
     const [imageSt2, setimageSt2] = useState(stable2Img);
-    console.log(imageSt2);
+
 
     return (
-        <div>
-            <ImageList images={imageSt2}/>
+        <div className={styles.galleryContainer}>
+            <ImageList images={imageSt2} />
         </div>
     )
 }
