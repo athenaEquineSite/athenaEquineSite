@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className={stylesHome.home}>
         <div className={stylesHome.companyPicture}>
-          <img src="https://image.freepik.com/free-vector/group-people-posing-photo_23-2148217915.jpg" />
+          <img src="https://image.freepik.com/free-photo/family-celebrating-festive-christmas-dinner_23-2149145005.jpg" />
         </div>
         <h3 className={stylesHome.companyMotto}>A company created by horses enthusiasts for horses enthusiasts.</h3>
         <div className={stylesHome.companyDescription}>
