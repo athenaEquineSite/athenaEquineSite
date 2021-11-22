@@ -1,0 +1,38 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+
+  background-color: #427190;
+  z-index: 1000000;
+
+  padding: 25px;
+  .loaderImageWrapper {
+    animation: spin 1s linear infinite;
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .loaderText {
+    font-size: 20px;
+    margin: 100px;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}

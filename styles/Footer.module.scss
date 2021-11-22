@@ -1,65 +1,89 @@
 .footer {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: column;
-	max-width: 1200px;
-	width: 100%;
-	height: 100%;
-	padding: 30px;
-	margin: 30px auto;
-	.menuSection {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		.footLogoContainer {
-			width: 100px;
-			height: 100px;
-	
-			img {
-				width: 100%;
-				height: 100%;
-			}
-		}
-		.stables {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			margin: 0 15px;
-			padding: 15px;
-			line-height: 1.5;
-			.stableKolbjornrud {
-				list-style-type: none;
-				flex-direction: column;
-				margin: 0 20px;
-			}
-			.stableSolberg {
-				list-style-type: none;
-				flex-direction: column;
-				margin: 0 20px;
-			}
-			p {
-				cursor: pointer;
-			}
-			h3 {
-				text-transform: uppercase;
-			}
-		}
-		.basicMenu {
-			list-style-type: none;
-			flex-direction: column;
-			line-height: 1.5;
-			h3 {
-				text-transform: uppercase;
-			}
-			p {
-				cursor: pointer;
-			}
-		}
-	}
-	.copyright {
-		text-align: center;
-		padding: 40px 0 0 0;
-		width: 100%;
-	}
-}	
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  margin: 30px auto;
+  .menuSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .footLogoContainer {
+      width: 100px;
+      height: 100px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .stables {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 15px;
+      padding: 15px;
+      line-height: 1.5;
+      .stableKolbjornrud {
+        list-style-type: none;
+        flex-direction: column;
+        margin: 0 20px;
+      }
+      .stableSolberg {
+        list-style-type: none;
+        flex-direction: column;
+        margin: 0 20px;
+      }
+      p {
+        cursor: pointer;
+      }
+      h3 {
+        text-transform: uppercase;
+      }
+    }
+    .basicMenu {
+      list-style-type: none;
+      flex-direction: column;
+      line-height: 1.5;
+      h3 {
+        text-transform: uppercase;
+      }
+      p {
+        cursor: pointer;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    padding: 40px 0 0 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer .menuSection {
+    flex-direction: column;
+    .stables,
+    .basicMenu {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer .menuSection .stables {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .stableSolberg,
+    .stableKolbjornrud {
+      padding: 20px 0;
+    }
+  }
+  .footer .menuSection .basicMenu {
+    padding: 0;
+    margin: 0;
+  }
+}

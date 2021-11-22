@@ -2,13 +2,15 @@ import React from 'react';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
 import styles from '../styles/Layout.module.scss';
+import { Loader } from './Loader';
 
-export const Layout = ({children}) => {
+export const Layout = ({children, loading}) => {
     return (
         <div className={`${styles.layoutBody}`}>
             <Nav />
             <div className={`container ${styles.mainPage}`}>
-                <main className={styles.main}>
+                {loading && <Loader />}
+                    <main className={`${styles.main}`}>
                     {children}
                 </main>
             </div>

@@ -2,13 +2,13 @@
 @import 'mixins';
 @import 'normalize';
 @import 'layout';
-
+@import 'nprogress/nprogress.css';
 * {
   box-sizing: border-box;
   margin: 0;
 }
 body {
-  background-image: linear-gradient(to right top, #4D4D4B 0%, #3498db 100%);
+  background-image: linear-gradient(to right top, #4d4d4b 0%, #3498db 100%);
   font-family: $main-font;
   color: $font-color;
 }
@@ -22,4 +22,9 @@ p {
   align-items: center;
   justify-content: center;
   padding: 10px;
+}
+
+#nprogress .bar {
+  background-color: #fff;
+  padding: 5px;
 }

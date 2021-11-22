@@ -1,12 +1,13 @@
 import NewsList from '../../components/NewsList';
 import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
+import styles from '../../styles/News.module.scss';
 
 function Newses({news}) {
 
    
     return (
-        <div>
+        <div className={`container ${styles.newsContainer}`}>
             <NewsList posts={news}/>
         </div>
     )
