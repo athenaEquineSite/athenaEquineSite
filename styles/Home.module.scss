@@ -63,7 +63,7 @@
         z-index: 5;
       }
       .employeeDescription {
-        transform: translate(6.25rem, 0);
+        transform: translate(5.5rem, 0);
         background: rgba(0, 0, 0, 0.5);
         z-index: 10;
       }
@@ -134,5 +134,25 @@
   .employees {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     gap: 10px;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .employees {
+    .employee {
+      &:hover {
+        .employeePhotoContainer {
+          transform: translate(0, -10rem);
+        }
+        .employeeName {
+          transform: translate(0, -10rem);
+        }
+        .employeeDescription {
+          transform: translate(0, 10rem);
+          background: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
   }
 }
