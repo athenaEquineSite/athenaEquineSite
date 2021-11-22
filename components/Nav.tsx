@@ -18,7 +18,7 @@ export const Nav = () => {
                 <div className={`${navStyles.menuItem} col-2`}>
                    <Link href="/" passHref><p>Home</p></Link>
                 </div>
-                <div className={`${navStyles.menuItem} col-2 ${navStyles.dropdown}`}>
+                <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
                     <p>Kolbjornrud</p>
                     <div className={navStyles.dropdownContent}>
                         <Link href="/stable1/about" passHref><p>About</p></Link>
@@ -26,7 +26,7 @@ export const Nav = () => {
                         <Link href="/stable1/gallery" passHref><p>Gallery</p></Link>
                     </div>
                 </div>
-                <div className={`${navStyles.menuItem} col-2 ${navStyles.dropdown}`}>
+                <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
                     <p>Solberg</p>
                     <div className={navStyles.dropdownContent}>
                         <Link href="/stable2/about" passHref><p>About</p></Link>

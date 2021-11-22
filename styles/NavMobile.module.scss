@@ -1,0 +1,66 @@
+.navMobileContainer {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 300px;
+  background: white;
+  color: rgba(0, 0, 0, 0.87);
+  clip-path: circle(24px at 32px 24px);
+  transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  z-index: 1000;
+  &:hover {
+    transition-timing-function: ease-out;
+    transition-duration: 0.75s;
+    clip-path: circle(520px at 150px 24px);
+  }
+  .kolbjornrudMobileTitle {
+  }
+  .solbergMobileTitle {
+  }
+  a {
+    display: block;
+    line-height: 50px;
+    padding: 0 20px;
+    color: inherit;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      background: #ffe082;
+    }
+    &:active {
+      background: #ffca28;
+    }
+  }
+  .navicon {
+    padding: 23px 20px;
+    cursor: pointer;
+    transform-origin: 32px 24px;
+    div {
+      position: relative;
+      width: 20px;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.87);
+      &:before,
+      &:after {
+        display: block;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.87);
+        position: absolute;
+      }
+      &:before {
+        top: -7px;
+      }
+      &:after {
+        top: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .navMobileContainer {
+    display: none;
+  }
+}
