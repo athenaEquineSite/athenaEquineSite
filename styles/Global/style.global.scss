@@ -8,7 +8,15 @@
   margin: 0;
 }
 body {
-  background-image: linear-gradient(to right top, #4d4d4b 0%, #3498db 100%);
+  background: linear-gradient(
+      to top,
+      blue 50%,
+      rgba(28, 36, 70, 0.5) 70%,
+      rgba(28, 36, 70, 0) 80%
+    ),
+    url('/backimg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 60%;
   font-family: $main-font;
   color: $font-color;
 }

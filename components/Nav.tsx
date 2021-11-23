@@ -19,7 +19,7 @@ export const Nav = () => {
                    <Link href="/" passHref><p>Home</p></Link>
                 </div>
                 <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
-                    <p>Kolbjornrud</p>
+                    <p>Stall Kolbj&#216;rnrud Hestepensjonat</p>
                     <div className={navStyles.dropdownContent}>
                         <Link href="/stable1/about" passHref><p>About</p></Link>
                         <Link href="/stable1/offer" passHref><p>Offer</p></Link>
@@ -27,7 +27,7 @@ export const Nav = () => {
                     </div>
                 </div>
                 <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
-                    <p>Solberg</p>
+                    <p>Solberg G&#8491;rd</p>
                     <div className={navStyles.dropdownContent}>
                         <Link href="/stable2/about" passHref><p>About</p></Link>
                         <Link href="/stable2/offer" passHref><p>Offer</p></Link>
