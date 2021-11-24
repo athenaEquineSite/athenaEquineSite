@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import stylesHome from '../styles/Home.module.scss';
+import text from '../utils/textContent.json';
 
 export default function Home() {
   
@@ -15,11 +16,11 @@ export default function Home() {
         <div className={stylesHome.companyPicture}>
           <img src="https://image.freepik.com/free-photo/family-celebrating-festive-christmas-dinner_23-2149145005.jpg" />
         </div>
-        <h3 className={stylesHome.companyMotto}>A company created by horses enthusiasts for horses enthusiasts.</h3>
+        <h3 className={stylesHome.companyMotto}>{text.eng.home.companyMotto}</h3>
         <div className={stylesHome.companyDescription}>
-            <p>The origins of Athena Equine do not go far back in time. Two founders of the idea met in September 2020 for a short interview. Ended up talking for several hours about the same visions and dreams how to improve the horse care and services in the area of Indre Østfold. This company was created to provide the best care and service for horses and their owners and riders. The strongest suit of our team is that we combine expierience from various equine environments, dressage, jumping, eventing or even long distance racing, breeding and livery yards.</p>
-            <p>Athena Equine is based in Trøgstad, in two subjected yards - Stall Kolbjørnrud Hestepensjonat and Solberg Gård. Both yards meet every need of every horse and their owner.</p>
-            <p>	The team of Athena Equine is four vigorous women, who put their hearts into this job. That provides the highest level of care of our four-legged friends.</p>
+            <p>{text.eng.home.companyDescription.p1}</p>
+            <p>{text.eng.home.companyDescription.p2}</p>
+            <p>{text.eng.home.companyDescription.p3}</p>
         </div>
         <div className={`row ${stylesHome.employees}`}>
             <div className={`${stylesHome.employee}`}>
@@ -27,32 +28,32 @@ export default function Home() {
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/ELISABETH.jpg" alt="Elisabeth"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>Multitalented founder of the company, show jumper who brings her lifelong expierience in all the aspects of running a safe and successful horse yard.</p>
+                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.elizabeth}</p>
             </div>
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Kamila Derewianska</h4>
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/KAMILA.jpg" alt="Kamila"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>Partner in crime for Elisabeth, bringing in over 30 years of horse life in managing different kinds of yards, stables and yards; show jumper with a hint of eventing in her soul.</p>
+                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.kamila}</p>
             </div>
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Ida Louise Vordtvedt</h4>
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/IDA.jpg" alt="Ida"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>Athena&apos;s huge asset, taking care of everything during the vulnerable times, weekends, holidays. It wouldn&apos;t work as it should without Ida.</p>
+                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.ida}</p>
             </div>
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Anine Aarum Teig</h4>
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/ANINE.jpeg" alt="Anine"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>The youngest team member, grew up with horses; Anine is having the team&apos;s back with every task that is given to her, either it is every day stable work or fencing the fields; Athena is proud to see her grow and develop in all the sides of the horse life.</p>
+                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.anine}</p>
             </div>
         </div>
         <div className={stylesHome.companyDescription}>
-            <p>With all that combined, we put all the effort in making sure that your horse has the best life possible at our yards.</p>
+            <p>{text.eng.home.companyDescription.p4}</p>
         </div>
       </div>
     </div>

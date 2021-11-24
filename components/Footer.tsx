@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
     return (
-        <footer className={`${styles.footer} container`}>
+        <footer className={`${styles.footer}`}>
             <div className={`container ${styles.menuSection}`}>
                 <div className={`${styles.footLogoContainer}`}>
                     <img src="/LOGO.png"/>

@@ -1,11 +1,20 @@
 import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
+import styles from '../../styles/News.module.scss';
+import Link from 'next/link';
 
 function News({news}) {
     return (
-        <div>
-            <h1>{news.title}</h1>
-            <p>{news.body}</p>
+        <div className={`${styles.newsFullWrapper}`}>
+            <div className={`${styles.newsFullHeaderWrapper}`}>
+                <Link href="/news"><a className={`${styles.goBack}`}>Go Back</a></Link>
+                <h1 className={`${styles.newsFullTitle}`}>{news.title}</h1>
+                <h5 className={`${styles.newsFullDate}`}>{(new Date(news.date)).toDateString()}</h5>
+            </div>
+            <div className={`${styles.newsFullBodyWrapper}`}>
+                <p className={`${styles.newsFullBody}`}>{news.body}</p>
+            </div>
+            
         </div>
     )
 }

@@ -1,8 +1,14 @@
 import navStyles from '../styles/Nav.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export const Nav = () => {
+
+
+
+
+
     return (
         <div className={`container ${navStyles.navigation}`}>
             <div className={`${navStyles.logo} row`}>
@@ -11,7 +17,7 @@ export const Nav = () => {
                     <p>NOR</p>
                 </div>
                 <div className={`${navStyles.logoContainer} col-12`}>
-                    <Image src="/LOGO.png" width={150} height={150}/>
+                    <Image src="/LOGO.png" width={150} height={150} alt="logo"/>
                 </div>
             </div>
             <nav className={`${navStyles.menu} row`}>

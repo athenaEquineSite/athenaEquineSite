@@ -6,6 +6,7 @@ import styles from '../styles/Layout.module.scss';
 import { Loader } from './Loader';
 
 export const Layout = ({children, loading}) => {
+
     return (
         <div className={`${styles.layoutBody}`}>
             <Nav />

@@ -1,0 +1,21 @@
+@import './Global/variables';
+
+.kolbjornrudAboutWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .kolbjornrudAboutTitle {
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid $font-color;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-indent: 50px;
+    padding: 20px 0;
+  }
+}

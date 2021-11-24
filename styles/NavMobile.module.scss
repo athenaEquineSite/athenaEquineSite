@@ -1,3 +1,8 @@
+.showMobile {
+  transition-timing-function: ease-out;
+  transition-duration: 0.75s;
+  clip-path: circle(520px at 150px 24px) !important;
+}
 .navMobileContainer {
   position: fixed;
   top: 10%;
@@ -6,13 +11,9 @@
   background: white;
   color: rgba(0, 0, 0, 0.87);
   clip-path: circle(24px at 32px 24px);
-  transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  transition: clip-path 0.375s;
   z-index: 1000;
-  &:hover {
-    transition-timing-function: ease-out;
-    transition-duration: 0.75s;
-    clip-path: circle(520px at 150px 24px);
-  }
+
   .kolbjornrudMobileTitle {
   }
   .solbergMobileTitle {

@@ -8,6 +8,7 @@ import NProgress from 'nprogress';
 function MyApp({ Component, pageProps }) {
   
   const [loading, setLoading] = useState(false);
+  const [isEng, setIsEng] = useState(true);
   
 
   Router.events.on('routeChangeStart', (url) => {

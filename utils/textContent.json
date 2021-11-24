@@ -1,0 +1,106 @@
+{
+    "eng": {
+        "navigation": {
+            "home": "home",
+            "kolbjornrud": "Stall Kolbj&#216;rnrud Hestepensjonat",
+            "solberg": "Solberg G&#8491;rd",
+            "news": "news",
+            "contact": "contact"
+        },
+        "home": {
+            "companyMotto": "A company created by horses enthusiasts for horses enthusiasts.",
+            "companyDescription": {
+                "p1": "The origins of Athena Equine do not go far back in time. Two founders of the idea met in September 2020 for a short interview. Ended up talking for several hours about the same visions and dreams how to improve the horse care and services in the area of Indre Østfold. This company was created to provide the best care and service for horses and their owners and riders. The strongest suit of our team is that we combine expierience from various equine environments, dressage, jumping, eventing or even long distance racing, breeding and livery yards.",
+                "p2": "Athena Equine is based in Trøgstad, in two subjected yards - Stall Kolbjørnrud Hestepensjonat and Solberg Gård. Both yards meet every need of every horse and their owner.",
+                "p3": "The team of Athena Equine is four vigorous women, who put their hearts into this job. That provides the highest level of care of our four-legged friends.",
+                "p4": "With all that combined, we put all the effort in making sure that your horse has the best life possible at our yards."
+            },
+            "employeeDescription": {
+                "elizabeth": "Multitalented founder of the company, show jumper who brings her lifelong expierience in all the aspects of running a safe and successful horse yard.",
+                "kamila": "Partner in crime for Elisabeth, bringing in over 30 years of horse life in managing different kinds of yards, stables and yards; show jumper with a hint of eventing in her soul.",
+                "ida": "Athena's huge asset, taking care of everything during the vulnerable times, weekends, holidays. It wouldn't work as it should without Ida.",
+                "anine": "The youngest team member, grew up with horses; Anine is having the team's back with every task that is given to her, either it is every day stable work or fencing the fields; Athena is proud to see her grow and develop in all the sides of the horse life."
+            }
+        },
+        "kolbjornrud": {
+            "about": {
+                "title": "About",
+                "description": "Livery stables in Trøgstad, where horse welfare always comes first. We have 4 spacious boxes, good outdoor areas - big paddocks, huge fields for both horses and ponies, and very modern facilities. We are focused on retired horses and those otherwise unable to work daily training, mares with foals for upbringing. If you want your four-legged friend to have the best life, get in touch with us."
+            },
+            "offer": {
+                "title": "Offer"
+            },
+            "gallery": {
+                "title": "Gallery"
+            }
+
+        },
+        "solberg": {
+            "about": {
+                "title": "About",
+                "description": "A part of Athena's facilities, where we offer eight spacious boxes for horses and four big boxes for ponies or small horses. At Solberg, we supply every utility needed for a horse athlete and his rider: washing place, big tack room space, indoor arena with a set of obstacles, outdoor arena, both gravel and grass paddocks and fields. Solberg Gard came to be in 2009 and has been a home to a great dressage rider Jonas Elvebakk, who is still teaching here on weekly basis. Athena Equine AS also holds weekly training with Jan Harald Gulliksen, organizing events to school with the very best riders worldwide. Check our offer and be updated to see what's new."
+            },
+            "offer": {
+                "title": "Offer"
+            },
+            "gallery": {
+                "title": "Gallery"
+            }
+        },
+        "contact": {
+
+        }
+    },
+    "nor": {
+        "navigation": {
+            "home": "home",
+            "kolbjornrud": "Stall Kolbj&#216;rnrud Hestepensjonat",
+            "solberg": "Solberg G&#8491;rd",
+            "news": "news",
+            "contact": "contact"
+        },
+        "home": {
+            "companyMotto": "Et firma laget av hesteentusiaster for hesteentusiaster.",
+            "companyDescription": {
+                "p1": "Opprinnelsen til Athena Equine går ikke langt tilbake i tid. To grunnleggere av ideen møttes i september 2020 for ett kort intervju. De endte opp med å snakke i mange timer om de samme visjonene og drømmen om hvordan å forbedre hesteholdet og servicen rundt i hele Indre Østfold. Dette selskapet var opprettet for å tilby den beste omsorgen og servicen for hester, eierne deres og rytterne. Den sterkeste drakten til vårt team er at vi kombinerer erfaring fra diverse hestemiljøer, dressur, sprang, feltritt og til og med distanseritt, oppdrett og mange ulike staller.",
+                "p2": "Athena Equine befinner seg i Trøgstad, i to ulike staller - Stall Kolbjørnrud Hestepensjonat og Solberg gård. Begge stallene møter alle behov for hver hest og eieren deres.",
+                "p3": "Teamet bak Athena Equine består av fire energiske damer, som putter hjertet inni denne jobben. Dette innfrir den beste formen for omsorg for våre firbeinte venner.",
+                "p4": "Men alt dette kan vi si at vi putter all innsats i å være sikre på at hestene har det så bra som de kan hos oss."
+            },
+            "employeeDescription": {
+                "elizabeth": "Multitalentfull grunnlegger for firma, Elisabeth er en sprangrytter som bruker sine livslange erfaringer med hest så mye hun kan for å drive en trygg og suksessfull stall.",
+                "kamila": "Elisabeths partner in crime, hun har over 30 år med hesteerfaring i forskjellige typer staller. Kamíla er en sprangrytter med et lite hint av feltritt.",
+                "ida": "Athenas enorme ressurs, som tar seg av alt i sårbare tider, helger, ferier. Det ville ikke fungert som det skulle uten Ida.",
+                "anine": "Teamets yngste medlem. Anine vokste opp med hester og har ryggen vår uansett hvilken oppgave hun får. Uansett om det er hverdagslig stallarbeid eller å sette opp gjerder. Athena er veldig stolte av å se henne vokse og utvikle seg i alle sider av hestelivet."
+            }
+        },
+        "kolbjornrud": {
+            "about": {
+                "title": "Beskrivelse",
+                "description": "Kolbjørnrud ligger i Trøgstad, her kommer alltid hestens velferd først. Vi har fire romslige bokser, fine utendørs områder med store paddocker, store beiter for både hester og ponnier, og veldig moderne fasiliteter. Vi fokuserer på pensjonerte hester og de som ikke har muligheter til å fungere til daglig trening og hopper med føll som skal oppdras. Hvis du vil at din firbeinte venn skal leve sitt beste liv, kontakt oss."
+            },
+            "offer": {
+                "title": "By p&#8491;"
+            },
+            "gallery": {
+                "title": "Galleri"
+            }
+
+        },
+        "solberg": {
+            "about": {
+                "title": "Beskrivelse",
+                "description": "Solberg gård er en del av Athena’s fasiliteter, vi tilbyr åtte romslige bokser for hester og fire store bokser for ponnier eller små hester. På Solberg har vi alle fasiliteter som er nødvendig for en hest og dens rytter: vaskespilt, stort salrom, ridehus med hindre, utendørs ridebane, både grus og gresspaddocker og beiter. Solberg gård ble startet I 2009 og her har blant annet den dyktige dressurrytteren Jonas Elvebakk bodd. Jonas er fortsatt trener her en gang i uken. Athena Equine AS har også ukentlige treninger med Jan Harald Gulliksen, som også arrangerer treninger med de beste rytterne i verden. Sjekk ut våre tilbud og hold deg oppdatert på våre nyheter."
+            },
+            "offer": {
+                "title": "By p&#8491;"
+            },
+            "gallery": {
+                "title": "Galleri"
+            }
+        },
+        "contact": {
+
+        }
+    }
+}
