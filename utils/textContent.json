@@ -1,9 +1,9 @@
 {
     "eng": {
         "navigation": {
-            "home": "home",
+            "home": "about us",
             "kolbjornrud": "Stall Kolbj&#216;rnrud Hestepensjonat",
-            "solberg": "Solberg G&#8491;rd",
+            "solberg": "Solberg Gård",
             "news": "news",
             "contact": "contact"
         },
@@ -24,40 +24,75 @@
         },
         "kolbjornrud": {
             "about": {
-                "title": "About",
+                "title": "Stall Kolbjørnrud Hestepensjonat",
                 "description": "Livery stables in Trøgstad, where horse welfare always comes first. We have 4 spacious boxes, good outdoor areas - big paddocks, huge fields for both horses and ponies, and very modern facilities. We are focused on retired horses and those otherwise unable to work daily training, mares with foals for upbringing. If you want your four-legged friend to have the best life, get in touch with us."
             },
             "offer": {
-                "title": "Offer"
+                "title": "Stall Kolbjørnrud Hestepensjonat - Offer",
+                "description": "Stall Kolbjørnrud Hestepensjonat is very elastic to meet your expectations and offers three livery packages, depending on services we provide for your horse.",
+                "basicList": {
+                    "title": "Level BASIC: ",
+                    "list": ["hay - breakfast on the paddock or inside, lunch and supper", "grains provided by the stable - PAVO and Spillers (otherwise on your own purchase)", "taking out on the paddock / field and taking in at appointed time of day", "shavings for box bedding."],
+                    "price": "6500kr/month"
+                },
+                "mediumList": {
+                    "title": "Level MEDIUM is BASIC plus: ",
+                    "list":["farrier service", "supplements according needs and vet's consult", "grooming 2 days / week, like stretching, massage, bath, hot clothing", "daily cleaning of the paddock", "laundry possibility once a week"],
+                    "price": "8000kr/month"
+                },
+                "premiumList": {
+                    "title": "Level PREMIUM is MEDIUM plus :",
+                    "list":["chiropractor / osteopath service", "daily cleaning of the box", "grooming 3 days / week", "exercising, like longing, walking, riding", "laundry possibility twice a week", "tack cleaning once a week"],
+                    "price": "10000kr/month"
+                },
+                "usage": {
+                    "title": "Stall Kolbjørnrud Hestepensjonat uses:",
+                    "list": ["Conductive Magno Boots", "Magni-Teque Magnetic Horse Rug", "Equilibrium Therapy XL Massage Pad"]
+                },
+                "rest": "We also offer clipping of horses and ponnies, using Lister, Liveryman and DeLaval clippers, 600kr/pony and 800kr/horse."
             },
             "gallery": {
-                "title": "Gallery"
+                "title": "Stall Kolbjørnrud Hestepensjonat - Gallery"
             }
 
         },
         "solberg": {
             "about": {
-                "title": "About",
+                "title": "Solberg Gård",
                 "description": "A part of Athena's facilities, where we offer eight spacious boxes for horses and four big boxes for ponies or small horses. At Solberg, we supply every utility needed for a horse athlete and his rider: washing place, big tack room space, indoor arena with a set of obstacles, outdoor arena, both gravel and grass paddocks and fields. Solberg Gard came to be in 2009 and has been a home to a great dressage rider Jonas Elvebakk, who is still teaching here on weekly basis. Athena Equine AS also holds weekly training with Jan Harald Gulliksen, organizing events to school with the very best riders worldwide. Check our offer and be updated to see what's new."
             },
             "offer": {
-                "title": "Offer"
+                "title": "Solberg Gård - Offer",
+                "liveryPack": {
+                    "title": "Solberg Gård livery pack inculde:",
+                    "price": "7500 kroner / month",
+                    "list": ["morning feeding, blanket change, take out/in", "hay feeding inside and on paddocks", "feeds - PAVO and Spillers", "shavings", "mucking out on weekdays"]
+                },
+                "otherPack": {
+                    "otherOfferOne": "Horse care, massage, power walking, longing, riding, hacking costs 250kr/hour.",
+                    "otherOfferTwo": "There is an option to have the box mucked out on weekends for additional 500kr/month.",
+                    "otherOfferThree": "We offer laundry of horse equipment and blankets, 150kr for an IKEA bag, with drying.",
+                    "otherOfferFour": "We also offer clipping of horses and ponies, using Lister, Liveryman and DeLaval clippers, 600kr/pony and 800kr/horse."
+                }
             },
             "gallery": {
-                "title": "Gallery"
+                "title": "Solberg Gård - Gallery"
             }
         },
+        "news": {
+            "title": "News"
+        },
         "contact": {
-
+            "title": "Contact"
         }
     },
     "nor": {
         "navigation": {
-            "home": "home",
-            "kolbjornrud": "Stall Kolbj&#216;rnrud Hestepensjonat",
-            "solberg": "Solberg G&#8491;rd",
-            "news": "news",
-            "contact": "contact"
+            "home": "om oss",
+            "kolbjornrud": "Stall Kolbjørnrud Hestepensjonat",
+            "solberg": "Solberg Gård",
+            "news": "nyheter",
+            "contact": "kontakt"
         },
         "home": {
             "companyMotto": "Et firma laget av hesteentusiaster for hesteentusiaster.",
@@ -76,31 +111,66 @@
         },
         "kolbjornrud": {
             "about": {
-                "title": "Beskrivelse",
+                "title": "Stall Kolbjørnrud Hestepensjonat",
                 "description": "Kolbjørnrud ligger i Trøgstad, her kommer alltid hestens velferd først. Vi har fire romslige bokser, fine utendørs områder med store paddocker, store beiter for både hester og ponnier, og veldig moderne fasiliteter. Vi fokuserer på pensjonerte hester og de som ikke har muligheter til å fungere til daglig trening og hopper med føll som skal oppdras. Hvis du vil at din firbeinte venn skal leve sitt beste liv, kontakt oss."
             },
             "offer": {
-                "title": "By p&#8491;"
+                "title": "Stall Kolbjørnrud Hestepensjonat - By på",
+                "description": "Stall Kolbjørnrud hestepensjonat er veldig fleksible for å møte dine forventninger og vi tilbyr tre ulike pakker basert på tjenestene vi tilbyr for din hest.",
+                "basicList": {
+                    "title": "Level «BASIC»: ",
+                    "list": ["Høy – frokost ute i paddocken eller inne, lunsj og kveldsmat", "Kraftfôr skaffet av stallen – PAVO og Spillers (om du skal ha noe annet må dette kjøpes selv)", "Vi setter ut hestene i paddockene/ beitene og tar de inn på en bestemt tid på dagen", "Flis til underlag i boksene"],
+                    "price": "6500 kr/mnd"
+                },
+                "mediumList": {
+                    "title": "Level «MEDIUM» er «BASIC» plus: ",
+                    "list":["Hovslager service", "Kostilskudd og veterinær etter behov", "Stell 2 ganger I uka, for eksempel strekking/tøying, massasje, vasking, varmedekken", "Daglig rengjøring av paddocken ", "Muligheter for å bruke vaskemaskin en gang i uka"],
+                    "price": "8000 kr/mnd"
+                },
+                "premiumList": {
+                    "title": "Level «PREMIUM» er «MEDIUM» plus :",
+                    "list":["Kiropraktor/ osteopat service", "Daglig rengjøring i boksen", "Stell tre ganger i uken", "Trening, som longering, leiing og ridning ", "Muligheter for å bruke vaskemaskin to ganger i uka", "Rengjøring av utstyr en gang i uken "],
+                    "price": "10 000 kr/mnd"
+                },
+                "usage": {
+                    "title": "Stall Kolbjørnrud Hestepensjonat bruker:",
+                    "list": ["Conductive Magno Boots", "Mangi-Teque magnetisk dekken", "Equilibrium Therapy XL Massasjepad"]
+                },
+                "rest": "Vi tilbyr også barbering av hester og ponnier, vi bruker Lister, Liveryman og DeLaval maskiner. 600 kr for ponni og 800 kr for hest."
             },
             "gallery": {
-                "title": "Galleri"
+                "title": "Stall Kolbjørnrud Hestepensjonat - Galleri"
             }
 
         },
         "solberg": {
             "about": {
-                "title": "Beskrivelse",
+                "title": "Solberg Gård",
                 "description": "Solberg gård er en del av Athena’s fasiliteter, vi tilbyr åtte romslige bokser for hester og fire store bokser for ponnier eller små hester. På Solberg har vi alle fasiliteter som er nødvendig for en hest og dens rytter: vaskespilt, stort salrom, ridehus med hindre, utendørs ridebane, både grus og gresspaddocker og beiter. Solberg gård ble startet I 2009 og her har blant annet den dyktige dressurrytteren Jonas Elvebakk bodd. Jonas er fortsatt trener her en gang i uken. Athena Equine AS har også ukentlige treninger med Jan Harald Gulliksen, som også arrangerer treninger med de beste rytterne i verden. Sjekk ut våre tilbud og hold deg oppdatert på våre nyheter."
             },
             "offer": {
-                "title": "By p&#8491;"
+                "title": "Solberg Gård - By på",
+                "liveryPack": {
+                    "title": "Solberg Gård pakke inkluderer:",
+                    "price": "7500 kroner i måneden",
+                    "list": ["morgen fôring, dekkenskift og inn- og uttaking", "høy ute og i paddockene", "kraftfôr – PAVO og Spillers", "flis", "møkking i helgene"]
+                },
+                "otherPack": {
+                    "otherOfferOne": "Hestestell, massasje, powerwalking, longering, ridning og turriding koster 250 kr i timen.",
+                    "otherOfferTwo": "Det er en mulighet å betale 500 kr i måneden for at vi møkker boksen i ukedagene.",
+                    "otherOfferThree": "Vi tilbyr å vaske og tørke en IKEA-bag med hesteutstyr og dekken for 150 kr baggen.",
+                    "otherOfferFour": "Vi tilbyr også hestebarbering med Lister, Liveryman og DeLaval maskin, 600 kr for ponni og 800 kr for hest."
+                }
             },
             "gallery": {
-                "title": "Galleri"
+                "title": "Solberg Gård - Galleri"
             }
         },
+        "news": {
+            "title": "Nyheter"
+        },
         "contact": {
-
+            "title": "Kontakt"
         }
     }
 }

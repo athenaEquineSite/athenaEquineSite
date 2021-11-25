@@ -16,7 +16,8 @@ body {
     ),
     url('/backimg.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%, 100% 60%;
+  background-attachment: scroll, fixed;
+  background-size: 100% 100%, 100% 100%;
   font-family: $main-font;
   color: $font-color;
 }

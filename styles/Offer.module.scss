@@ -1,0 +1,73 @@
+@import './Global/variables';
+
+.offerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .offerHeader {
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid $font-color;
+  }
+  .offerBodyWrapper {
+    .offerDescription {
+      font-size: 20px;
+      line-height: 1.6;
+      padding: 20px 0;
+    }
+    .levelsWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      gap: 10px;
+      justify-items: center;
+      align-items: center;
+      grid-auto-flow: dense;
+      .levelOffer {
+        background: #1c2446;
+        padding: 15px;
+        .levelTitle {
+          padding: 15px 0;
+          min-height: 3rem;
+        }
+        .offerList {
+          min-height: 25rem;
+          li {
+            p {
+              font-size: 20px;
+              line-height: 1.6;
+            }
+          }
+        }
+        .levelOfferPrice {
+          text-align: center;
+        }
+      }
+    }
+    .offerStallUses {
+      padding: 15px;
+      margin-top: 30px;
+      .offerStallUsesTitle {
+        padding: 15px 0;
+      }
+      ul {
+        min-height: 10rem;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.gridColumnOne {
+  grid-template-columns: repeat(1, minmax(100px, 1fr)) !important;
+}
+.moreMarginTopInPTag {
+  p {
+    margin-top: 20px;
+  }
+}

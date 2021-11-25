@@ -1,23 +1,27 @@
 import navStyles from '../styles/Nav.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
-
+import { useLang, useLangUpdate } from '../context/LanguageProvider';
 export const Nav = () => {
 
-
-
-
+    const isNor = useLang();
+    const {langIsNor, langIsEng} = useLangUpdate();
 
     return (
         <div className={`container ${navStyles.navigation}`}>
+            <div className={`${navStyles.languages}`}>
+                    <div className={`${navStyles.singleLanguage}`} onClick={langIsEng}>
+                        <Image src="/united-kingdom.png" width={40} height={40} alt="englishLogo" />
+                        <p>ENG</p>
+                    </div>
+                    <div className={`${navStyles.singleLanguage}`} onClick={langIsNor}>
+                        <Image src="/norway.png" width={40} height={40} alt="norwegianLogo" />
+                        <p>NOR</p>
+                    </div>
+            </div>
             <div className={`${navStyles.logo} row`}>
-                <div className={`${navStyles.languages}`}>
-                    <p>ENG</p>
-                    <p>NOR</p>
-                </div>
                 <div className={`${navStyles.logoContainer} col-12`}>
-                    <Image src="/LOGO.png" width={150} height={150} alt="logo"/>
+                    <Image src="/LOGO.png" width={200} height={200} alt="logo"/>
                 </div>
             </div>
             <nav className={`${navStyles.menu} row`}>

@@ -1,0 +1,22 @@
+@import './Global/variables';
+
+.contactHeaderWrapper {
+  font-style: italic;
+  text-align: left;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid $font-color;
+}
+.contactBodyWrapper {
+  padding: 40px;
+  font-size: 20px;
+  line-height: 1.6;
+  .contactCompanyName {
+    font-weight: 600;
+    font-size: 28px;
+    padding: 20px 0;
+  }
+  .elizabethPhone {
+    margin-top: 20px;
+  }
+}

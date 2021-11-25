@@ -4,7 +4,14 @@
   height: 100%;
   width: 100%;
 }
-
+.newsHeaderWrapper {
+  font-style: italic;
+  text-align: left;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid $font-color;
+  margin-bottom: 50px;
+}
 .newsList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

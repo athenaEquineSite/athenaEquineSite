@@ -1,9 +1,11 @@
 import { Layout } from '../components/Layout';
 import { useState } from 'react';
 import '../styles/Global/style.global.scss';
-import Router, { createRouter } from 'next/router';
+import Router from 'next/router';
 import NProgress from 'nprogress';
-
+import { TextContext } from '../context/TextContext';
+import text from '../utils/textContent.json';
+import { LanguageProvider } from '../context/LanguageProvider';
 
 function MyApp({ Component, pageProps }) {
   
@@ -22,9 +24,13 @@ function MyApp({ Component, pageProps }) {
   });
   
   return (
-      <Layout loading={loading}>
-          <Component {...pageProps} />
-      </Layout>
+    <LanguageProvider>
+      <TextContext.Provider value={text}>
+        <Layout loading={loading}>
+            <Component {...pageProps} />
+        </Layout>
+      </TextContext.Provider>
+    </LanguageProvider>
   )
 }
 

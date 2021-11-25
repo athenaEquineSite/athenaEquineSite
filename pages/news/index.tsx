@@ -1,3 +1,4 @@
+import text from '../../utils/textContent.json';
 import NewsList from '../../components/NewsList';
 import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
@@ -8,7 +9,10 @@ function Newses({news}) {
    
     return (
         <div className={`container ${styles.newsContainer}`}>
-            <NewsList posts={news}/>
+          <div className={`${styles.newsHeaderWrapper}`}>
+            <h1 className={`${styles.newsTitle}`}>{text.eng.news.title}</h1>
+          </div>
+          <NewsList posts={news}/>
         </div>
     )
 }
