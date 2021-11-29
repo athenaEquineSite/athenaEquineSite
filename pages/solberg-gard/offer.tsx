@@ -7,6 +7,10 @@ import { useLang } from '../../context/LanguageProvider';
 const OfferStable2 = () => {
 
     useEffect(() => {
+        const body = document.body;
+        if(body.classList.contains('kolbjornrudBackground')) {
+            body.classList.remove('kolbjornrudBackground');
+        }
         if(document.body.classList.contains('solbergBackground')) {
             return;
         }

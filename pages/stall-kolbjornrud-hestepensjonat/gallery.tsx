@@ -1,6 +1,6 @@
 import styles from '../../styles/Gallery/Gallery.module.scss';
 import ImageSt1 from "../../models/ImageSt1";
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import dbConnect from "../../utils/dbConnect";
 import ImageList from '../../components/gallery/ImageList';
 import { TextContext } from '../../context/TextContext';
@@ -11,6 +11,17 @@ const Stable1Gallery = ({stable1Img}) => {
     const [imageSt1, setimageSt1] = useState(stable1Img);
     const text = useContext(TextContext);
     const isNor = useLang();
+
+    useEffect(() => {
+        const body = document.body;
+        if(body.classList.contains('solbergBackground')) {
+            body.classList.remove('solbergBackground');
+        }
+        if(body.classList.contains('kolbjornrudBackground')) {
+            return;
+        }
+        body.classList.add('kolbjornrudBackground')
+    });
 
     return (
         <div className={styles.galleryContainer}>

@@ -5,6 +5,17 @@ import { useLang } from '../../context/LanguageProvider';
 
 function About() {
 
+    useEffect(() => {
+        const body = document.body;
+        if(body.classList.contains('solbergBackground')) {
+            body.classList.remove('solbergBackground');
+        }
+        if(body.classList.contains('kolbjornrudBackground')) {
+            return;
+        }
+        body.classList.add('kolbjornrudBackground')
+    });
+
     const text = useContext(TextContext);
     const isNor = useLang();
 

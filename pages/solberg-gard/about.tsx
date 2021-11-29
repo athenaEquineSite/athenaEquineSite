@@ -6,6 +6,10 @@ import { useLang } from '../../context/LanguageProvider';
 function About() {
 
     useEffect(() => {
+        const body = document.body;
+        if(body.classList.contains('kolbjornrudBackground')) {
+            body.classList.remove('kolbjornrudBackground');
+        }
         if(document.body.classList.contains('solbergBackground')) {
             return;
         }
