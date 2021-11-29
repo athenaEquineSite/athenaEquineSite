@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <div className={stylesHome.home}>
         <div className={stylesHome.companyPicture}>
-          <img src="/group.jpg" alt="groupPhoto"/>
+          <img src="/group.JPG" alt="groupPhoto"/>
         </div>
         <h3 className={stylesHome.companyMotto}>{isNor ? text.nor.home.companyMotto : text.eng.home.companyMotto}</h3>
         <div className={stylesHome.companyDescription}>
@@ -56,7 +56,7 @@ export default function Home() {
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Anine Aarum Teig</h4>
                 <div className={stylesHome.employeePhotoContainer}>
-                  <img src="/Anine.jpg" alt="Anine"/>
+                  <img src="/Anine.JPG" alt="Anine"/>
                 </div>
                 <p className={stylesHome.employeeDescription}>{isNor ? text.nor.home.employeeDescription.anine : text.eng.home.employeeDescription.anine}</p>
             </div>
