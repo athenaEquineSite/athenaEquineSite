@@ -13,6 +13,9 @@ export default function Gallery({stable1Img, stable2Img}) {
         if(document.body.classList.contains('solbergBackground')) {
           document.body.classList.remove('solbergBackground')    
         }
+        if(document.body.classList.contains('kolbjornrudBackground')) {
+            document.body.classList.remove('kolbjornrudBackground')    
+        }
       });
 
     const [stable1Images, setStable1Images] = useState(stable1Img);

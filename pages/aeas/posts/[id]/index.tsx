@@ -13,6 +13,9 @@ function PostPage({post}) {
         if(document.body.classList.contains('solbergBackground')) {
           document.body.classList.remove('solbergBackground')    
         }
+        if(document.body.classList.contains('kolbjornrudBackground')) {
+            document.body.classList.remove('kolbjornrudBackground')    
+        }
       });
 
     return (
