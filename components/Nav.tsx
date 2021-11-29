@@ -2,21 +2,24 @@ import navStyles from '../styles/Nav.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLang, useLangUpdate } from '../context/LanguageProvider';
+import { TextContext } from '../context/TextContext';
+import { useContext } from 'react';
+
+
 export const Nav = () => {
 
     const isNor = useLang();
     const {langIsNor, langIsEng} = useLangUpdate();
+    const text = useContext(TextContext);
 
     return (
         <div className={`container ${navStyles.navigation}`}>
             <div className={`${navStyles.languages}`}>
                     <div className={`${navStyles.singleLanguage}`} onClick={langIsEng}>
-                        <Image src="/united-kingdom.png" width={40} height={40} alt="englishLogo" />
-                        <p>ENG</p>
+                        <Image src="/united-kingdom.png" width={30} height={30} alt="englishLogo" />
                     </div>
                     <div className={`${navStyles.singleLanguage}`} onClick={langIsNor}>
-                        <Image src="/norway.png" width={40} height={40} alt="norwegianLogo" />
-                        <p>NOR</p>
+                        <Image src="/norway.png" width={30} height={30} alt="norwegianLogo" />
                     </div>
             </div>
             <div className={`${navStyles.logo} row`}>
@@ -26,29 +29,29 @@ export const Nav = () => {
             </div>
             <nav className={`${navStyles.menu} row`}>
                 <div className={`${navStyles.menuItem} col-2`}>
-                   <Link href="/" passHref><p>Home</p></Link>
+                   <Link href="/" passHref><p>{isNor ? text.nor.navigation.home : text.eng.navigation.home}</p></Link>
                 </div>
                 <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
                     <p>Stall Kolbj&#216;rnrud Hestepensjonat</p>
                     <div className={navStyles.dropdownContent}>
-                        <Link href="/stable1/about" passHref><p>About</p></Link>
-                        <Link href="/stable1/offer" passHref><p>Offer</p></Link>
-                        <Link href="/stable1/gallery" passHref><p>Gallery</p></Link>
+                        <Link href="/stall-kolbjornrud-hestepensjonat/about" passHref><p>{isNor ? text.nor.navigation.kolbjornrud.about : text.eng.navigation.kolbjornrud.about}</p></Link>
+                        <Link href="/stall-kolbjornrud-hestepensjonat/offer" passHref><p>{isNor ? text.nor.navigation.kolbjornrud.offer : text.eng.navigation.kolbjornrud.offer}</p></Link>
+                        <Link href="/stall-kolbjornrud-hestepensjonat/gallery" passHref><p>{isNor ? text.nor.navigation.kolbjornrud.gallery : text.eng.navigation.kolbjornrud.gallery}</p></Link>
                     </div>
                 </div>
                 <div className={`${navStyles.menuItem} col-3 ${navStyles.dropdown}`}>
                     <p>Solberg G&#8491;rd</p>
                     <div className={navStyles.dropdownContent}>
-                        <Link href="/stable2/about" passHref><p>About</p></Link>
-                        <Link href="/stable2/offer" passHref><p>Offer</p></Link>
-                        <Link href="/stable2/gallery" passHref><p>Gallery</p></Link>
+                        <Link href="/solberg-gard/about" passHref><p>{isNor ? text.nor.navigation.solberg.about : text.eng.navigation.solberg.about}</p></Link>
+                        <Link href="/solberg-gard/offer" passHref><p>{isNor ? text.nor.navigation.solberg.offer : text.eng.navigation.solberg.offer}</p></Link>
+                        <Link href="/solberg-gard/gallery" passHref><p>{isNor ? text.nor.navigation.solberg.gallery : text.eng.navigation.solberg.gallery}</p></Link>
                     </div>
                 </div>
                 <div className={`${navStyles.menuItem} col-2`}>
-                    <Link href="/news" passHref><p>News</p></Link>
+                    <Link href="/news" passHref><p>{isNor ? text.nor.navigation.news : text.eng.navigation.news}</p></Link>
                 </div>
                 <div className={`${navStyles.menuItem} col-2`}>
-                    <Link href="/contact" passHref><p>Contact</p></Link>
+                    <Link href="/contact" passHref><p>{isNor ? text.nor.navigation.contact : text.eng.navigation.contact}</p></Link>
                 </div>
             </nav>
         </div>

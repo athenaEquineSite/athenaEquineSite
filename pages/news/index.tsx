@@ -1,16 +1,26 @@
-import text from '../../utils/textContent.json';
 import NewsList from '../../components/NewsList';
 import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
 import styles from '../../styles/News.module.scss';
+import { TextContext } from '../../context/TextContext';
+import { useContext, useEffect } from 'react';
+import { useLang } from '../../context/LanguageProvider';
 
 function Newses({news}) {
 
+  useEffect(() => {
+    if(document.body.classList.contains('solbergBackground')) {
+      document.body.classList.remove('solbergBackground')    
+    }
+  });
+
+  const text = useContext(TextContext);
+  const isNor = useLang();
    
     return (
         <div className={`container ${styles.newsContainer}`}>
           <div className={`${styles.newsHeaderWrapper}`}>
-            <h1 className={`${styles.newsTitle}`}>{text.eng.news.title}</h1>
+            <h1 className={`${styles.newsTitle}`}>{isNor ? text.nor.news.title : text.eng.news.title}</h1>
           </div>
           <NewsList posts={news}/>
         </div>

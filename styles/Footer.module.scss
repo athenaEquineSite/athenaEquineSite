@@ -32,6 +32,12 @@
       margin: 0 15px;
       padding: 15px;
       line-height: 1.5;
+      p {
+        cursor: pointer;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
       .stableKolbjornrud {
         list-style-type: none;
         flex-direction: column;
@@ -42,11 +48,10 @@
         flex-direction: column;
         margin: 0 20px;
       }
-      p {
-        cursor: pointer;
-      }
       h3 {
         text-transform: uppercase;
+        max-width: 300px;
+        margin-bottom: 10px;
       }
     }
     .basicMenu {
@@ -55,9 +60,13 @@
       line-height: 1.5;
       h3 {
         text-transform: uppercase;
+        margin-bottom: 10px;
       }
       p {
         cursor: pointer;
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
     }
   }

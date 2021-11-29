@@ -2,13 +2,23 @@
     "eng": {
         "navigation": {
             "home": "about us",
-            "kolbjornrud": "Stall Kolbj&#216;rnrud Hestepensjonat",
-            "solberg": "Solberg Gård",
+            "kolbjornrud": {
+                "title": "Stall Kolbjørnrud Hestepensjonat",
+                "about": "about",
+                "offer": "offer",
+                "gallery": "gallery"
+            },
+            "solberg": {
+                "title": "Solberg Gård",
+                "about": "about",
+                "offer": "offer",
+                "gallery": "gallery"
+            },
             "news": "news",
             "contact": "contact"
         },
         "home": {
-            "companyMotto": "A company created by horses enthusiasts for horses enthusiasts.",
+            "companyMotto": "A company created by horse enthusiasts for horse enthusiasts.",
             "companyDescription": {
                 "p1": "The origins of Athena Equine do not go far back in time. Two founders of the idea met in September 2020 for a short interview. Ended up talking for several hours about the same visions and dreams how to improve the horse care and services in the area of Indre Østfold. This company was created to provide the best care and service for horses and their owners and riders. The strongest suit of our team is that we combine expierience from various equine environments, dressage, jumping, eventing or even long distance racing, breeding and livery yards.",
                 "p2": "Athena Equine is based in Trøgstad, in two subjected yards - Stall Kolbjørnrud Hestepensjonat and Solberg Gård. Both yards meet every need of every horse and their owner.",
@@ -89,8 +99,18 @@
     "nor": {
         "navigation": {
             "home": "om oss",
-            "kolbjornrud": "Stall Kolbjørnrud Hestepensjonat",
-            "solberg": "Solberg Gård",
+            "kolbjornrud": {
+                "title": "Stall Kolbjørnrud Hestepensjonat",
+                "about": "om",
+                "offer": "by på",
+                "gallery": "galleri"
+            },
+            "solberg": {
+                "title": "Solberg Gård",
+                "about": "om",
+                "offer": "by på",
+                "gallery": "galleri"
+            },
             "news": "nyheter",
             "contact": "kontakt"
         },

@@ -1,10 +1,19 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import stylesHome from '../styles/Home.module.scss';
 import text from '../utils/textContent.json';
+import { useLang } from '../context/LanguageProvider';
+import { useEffect } from 'react';
 
 export default function Home() {
   
+  const isNor = useLang();
+
+  useEffect(() => {
+    if(document.body.classList.contains('solbergBackground')) {
+      document.body.classList.remove('solbergBackground')    
+    }
+  });
+
   return (
     <div className={`container`}>
       <Head>
@@ -14,13 +23,13 @@ export default function Home() {
       </Head>
       <div className={stylesHome.home}>
         <div className={stylesHome.companyPicture}>
-          <img src="https://image.freepik.com/free-photo/family-celebrating-festive-christmas-dinner_23-2149145005.jpg" />
+          <img src="/group.jpg" alt="groupPhoto"/>
         </div>
-        <h3 className={stylesHome.companyMotto}>{text.eng.home.companyMotto}</h3>
+        <h3 className={stylesHome.companyMotto}>{isNor ? text.nor.home.companyMotto : text.eng.home.companyMotto}</h3>
         <div className={stylesHome.companyDescription}>
-            <p>{text.eng.home.companyDescription.p1}</p>
-            <p>{text.eng.home.companyDescription.p2}</p>
-            <p>{text.eng.home.companyDescription.p3}</p>
+            <p>{isNor ? text.nor.home.companyDescription.p1 : text.eng.home.companyDescription.p1}</p>
+            <p>{isNor ? text.nor.home.companyDescription.p2 : text.eng.home.companyDescription.p2}</p>
+            <p>{isNor ? text.nor.home.companyDescription.p3 : text.eng.home.companyDescription.p3}</p>
         </div>
         <div className={`row ${stylesHome.employees}`}>
             <div className={`${stylesHome.employee}`}>
@@ -28,32 +37,32 @@ export default function Home() {
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/ELISABETH.jpg" alt="Elisabeth"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.elizabeth}</p>
+                <p className={stylesHome.employeeDescription}>{isNor ? text.nor.home.employeeDescription.elizabeth : text.eng.home.employeeDescription.elizabeth}</p>
             </div>
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Kamila Derewianska</h4>
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/KAMILA.jpg" alt="Kamila"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.kamila}</p>
+                <p className={stylesHome.employeeDescription}>{isNor ? text.nor.home.employeeDescription.kamila : text.eng.home.employeeDescription.kamila}</p>
             </div>
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Ida Louise Vordtvedt</h4>
                 <div className={stylesHome.employeePhotoContainer}>
                   <img src="/IDA.jpg" alt="Ida"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.ida}</p>
+                <p className={stylesHome.employeeDescription}>{isNor ? text.nor.home.employeeDescription.ida : text.eng.home.employeeDescription.ida}</p>
             </div>
             <div className={`${stylesHome.employee}`}>
                 <h4 className={stylesHome.employeeName}>Anine Aarum Teig</h4>
                 <div className={stylesHome.employeePhotoContainer}>
-                  <img src="/ANINE.jpeg" alt="Anine"/>
+                  <img src="/Anine.jpg" alt="Anine"/>
                 </div>
-                <p className={stylesHome.employeeDescription}>{text.eng.home.employeeDescription.anine}</p>
+                <p className={stylesHome.employeeDescription}>{isNor ? text.nor.home.employeeDescription.anine : text.eng.home.employeeDescription.anine}</p>
             </div>
         </div>
         <div className={stylesHome.companyDescription}>
-            <p>{text.eng.home.companyDescription.p4}</p>
+            <p>{isNor ? text.nor.home.companyDescription.p4 : text.eng.home.companyDescription.p4}</p>
         </div>
       </div>
     </div>

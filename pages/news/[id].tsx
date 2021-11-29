@@ -2,8 +2,16 @@ import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
 import styles from '../../styles/News.module.scss';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 function News({news}) {
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
+
     return (
         <div className={`${styles.newsFullWrapper}`}>
             <div className={`${styles.newsFullHeaderWrapper}`}>

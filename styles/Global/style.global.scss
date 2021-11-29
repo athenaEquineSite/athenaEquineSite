@@ -7,7 +7,7 @@
   box-sizing: border-box;
   margin: 0;
 }
-body {
+.solbergBackground {
   background: linear-gradient(
       to top,
       #1c2444 50%,
@@ -15,6 +15,30 @@ body {
       rgba(28, 36, 70, 0) 80%
     ),
     url('/backimg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
+  background-size: 100% 100%, 100% 100%;
+}
+.kolbjornrudBackground {
+  background: linear-gradient(
+      to top,
+      #1c2444 50%,
+      rgba(28, 36, 70, 0.5) 70%,
+      rgba(28, 36, 70, 0) 80%
+    ),
+    url('/backimg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
+  background-size: 100% 100%, 100% 100%;
+}
+body {
+  background: linear-gradient(
+      to top,
+      #1c2444 50%,
+      rgba(28, 36, 70, 0.5) 70%,
+      rgba(28, 36, 70, 0) 80%
+    ),
+    url('/group.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll, fixed;
   background-size: 100% 100%, 100% 100%;

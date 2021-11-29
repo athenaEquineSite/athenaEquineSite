@@ -3,8 +3,15 @@ import { useRouter } from 'next/router';
 import { verify } from 'jsonwebtoken';
 import { jwtSecret } from '../../../utils/env';
 import User from '../../../models/User';
+import { useEffect } from 'react';
 
 function AddPost() {
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
 
     const router = useRouter();
 

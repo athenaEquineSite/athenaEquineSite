@@ -5,6 +5,7 @@ import User from '../../models/User';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { server, jwtSecret } from '../../utils/env';
+import { useEffect } from 'react';
 
 function Dashboard() {
     const router = useRouter();
@@ -13,6 +14,12 @@ function Dashboard() {
         const res = await fetch(`${server}/api/logout`, { method: "POST" });
         router.push('/aeas');
     }
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
 
     return (
         <div className={`${stylesDash.dashboard} row`}>

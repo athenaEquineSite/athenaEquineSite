@@ -1,12 +1,24 @@
-import text from '../utils/textContent.json';
 import styles from '../styles/Contact.module.scss';
+import { TextContext } from '../context/TextContext';
+import { useContext, useEffect } from 'react';
+import { useLang } from '../context/LanguageProvider';
 
 
 function Contact() {
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
+
+    const text = useContext(TextContext);
+    const isNor = useLang();
+
     return (
         <div>
             <div className={`${styles.contactHeaderWrapper}`}>
-                <h1 className={`${styles.contactTitle}`}>{text.eng.contact.title}</h1>
+                <h1 className={`${styles.contactTitle}`}>{isNor ? text.nor.contact.title : text.eng.contact.title}</h1>
             </div>
             <div className={`${styles.contactBodyWrapper}`}>
                 <p className={`${styles.contactCompanyName}`}>Athena Equine AS</p>

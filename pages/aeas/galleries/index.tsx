@@ -5,8 +5,15 @@ import User from '../../../models/User';
 import ImageSt1 from '../../../models/ImageSt1';
 import ImageSt2 from '../../../models/ImageSt2';
 import ImageContainer from '../../../components/dashboard/ImageContainer';
+import { useEffect } from 'react';
 
 export default function Gallery({stable1Img, stable2Img}) {
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
 
     const [stable1Images, setStable1Images] = useState(stable1Img);
     const [stable2Images, setStable2Images] = useState(stable2Img);

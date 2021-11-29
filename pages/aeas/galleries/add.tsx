@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useMutate } from 'restful-react';
 import { verify } from 'jsonwebtoken';
 import { jwtSecret } from '../../../utils/env';
@@ -13,6 +13,12 @@ function Upload() {
         verb: 'POST',
         path: 'api/gallery/upload'
     });
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
 
     const handleChange = (event) => {
         setImage(event.target.files[0]);     

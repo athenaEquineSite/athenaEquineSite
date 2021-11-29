@@ -1,10 +1,17 @@
 import styles from '../../styles/Offer.module.scss';
 import { LevelOffer } from '../../components/offer/LevelOffer';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { TextContext } from '../../context/TextContext';
 import { useLang } from '../../context/LanguageProvider';
 
 const OfferStable2 = () => {
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+            return;
+        }
+        document.body.classList.add('solbergBackground')
+    });
 
     const text = useContext(TextContext);
     const isLangNor = useLang();

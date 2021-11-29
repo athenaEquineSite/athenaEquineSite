@@ -5,8 +5,16 @@ import Link from 'next/link';
 import { verify } from 'jsonwebtoken';
 import { jwtSecret } from '../../../../utils/env';
 import User from '../../../../models/User';
+import { useEffect } from 'react';
 
 function PostPage({post}) {
+
+    useEffect(() => {
+        if(document.body.classList.contains('solbergBackground')) {
+          document.body.classList.remove('solbergBackground')    
+        }
+      });
+
     return (
         <div className={`${styles.post} row`}>
             <div className={`${styles.titleContainer} row col-1`}>

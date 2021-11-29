@@ -13,7 +13,7 @@ export const Layout = ({children, loading}) => {
             <NavMobile />
             <div className={`container ${styles.mainPage}`}>
                 {loading && <Loader />}
-                    <main className={`${styles.main}`}>
+                <main className={`${styles.main}`}>
                     {children}
                 </main>
             </div>
