@@ -27,14 +27,12 @@
       .levelOffer {
         background: #1c2446;
         padding: 15px;
-        min-height: 10rem;
         height: 100%;
         .levelTitle {
           padding: 15px 0;
-          min-height: 3rem;
         }
         .offerList {
-          min-height: 75%;
+          min-height: 60%;
           li {
             p {
               font-size: 20px;
@@ -44,7 +42,7 @@
         }
         .levelOfferPrice {
           text-align: center;
-          margin: 20px 0;
+          margin: 50px 0;
         }
       }
     }

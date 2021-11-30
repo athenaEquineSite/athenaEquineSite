@@ -1,22 +1,27 @@
 import { v4 as uuidv4 } from 'uuid';
 
+interface IBody {
+    title: String;
+    postBody: String;
+}
+
 export class PostModel {
     postId: string;
-    title: string;
-    body: string;
+    eng: IBody;
+    nor: IBody;
     date: number;
-    constructor(title: string, body: string) {
+    constructor(eng: IBody, nor: IBody) {
         this.postId = uuidv4();
-        this.title = title;
-        this.body = body;
+        this.eng = eng;
+        this.nor = nor;
         this.date = Date.now();
     }
 
     showPost() {
         return {
             postId: this.postId,
-            title: this.title,
-            body: this.body,
+            eng: this.eng,
+            nor: this.nor,
             date: new Date(this.date)
         }
     }

@@ -4,9 +4,12 @@ import Post from '../../../models/Post';
 import { verify } from 'jsonwebtoken';
 import { jwtSecret, server } from '../../../utils/env';
 import User from '../../../models/User';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 function Posts({posts}) {
+
+    const [postData, setPostData] = useState(posts);
 
     useEffect(() => {
         if(document.body.classList.contains('solbergBackground')) {
@@ -17,6 +20,7 @@ function Posts({posts}) {
         }
       });
 
+      const router = useRouter();
     const handleDeleteButton = async (postId) => {
         
         const res = await fetch(`${server}/api/posts/delete`, {
@@ -27,13 +31,16 @@ function Posts({posts}) {
             headers: {
                 'Content-Type': 'application/json'
             }
-        });        
+        });
+        
+        router.reload();        
     }
 
     // paginacja na wszystkie posty w PostList
     return (
+        
         <div>
-            <PostList posts={posts} onDelete={handleDeleteButton}/>
+            <PostList posts={postData} onDelete={handleDeleteButton}/>
         </div>
     )
 }

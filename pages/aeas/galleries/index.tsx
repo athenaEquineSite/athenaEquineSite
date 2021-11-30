@@ -6,6 +6,7 @@ import ImageSt1 from '../../../models/ImageSt1';
 import ImageSt2 from '../../../models/ImageSt2';
 import ImageContainer from '../../../components/dashboard/ImageContainer';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Gallery({stable1Img, stable2Img}) {
 
@@ -21,6 +22,8 @@ export default function Gallery({stable1Img, stable2Img}) {
     const [stable1Images, setStable1Images] = useState(stable1Img);
     const [stable2Images, setStable2Images] = useState(stable2Img);
 
+    const router = useRouter();
+
     const handleDelete = async (id) => {
         const res = await fetch(`${server}/api/gallery/delete`, {
             method: 'DELETE',
@@ -33,25 +36,26 @@ export default function Gallery({stable1Img, stable2Img}) {
         })
         const result = await res.json();
 
-        if((result.cloudinaryId).includes('stable1')) {
+        if((result.cloudinaryId).includes('Stall_Kolbjornrud_Hestepensjonat')) {
             const stable1 = stable1Images.filter(image => image.cloudinaryId !== id);
             setStable1Images(stable1);
-        } else if((result.cloudinaryId).includes('stable2')) {
+        } else if((result.cloudinaryId).includes('Solberg_Gard')) {
             const stable2 = stable2Images.filter(image => image.cloudinaryId !== id);
             setStable2Images(stable2);
         }
+        router.reload();
     }
 
     return (
         <div className={`row`}>
             <div className={`col-6`}>
-                <h1>Stable1</h1>
+                <h1>Stall Kolbjornrud Hestepensjonat</h1>
                 <div>
                     <ImageContainer handleDelete={handleDelete} images={stable1Images}/>
                 </div>
             </div>
             <div className={`col-6`}>
-                <h1>Stable2</h1>
+                <h1>Solberg Gard</h1>
                 <div>
                     <ImageContainer handleDelete={handleDelete} images={stable2Images}/>
                 </div>

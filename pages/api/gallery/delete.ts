@@ -9,9 +9,9 @@ export default async function deleteImage(req: NextApiRequest, res: NextApiRespo
         if(!id) throw new Error('No post to delete.');
 
         let deletedPost = {};
-        if(id.includes('stable1')) {
+        if(id.includes('Stall_Kolbjornrud_Hestepensjonat')) {
             deletedPost = await ImageSt1.findOneAndDelete({cloudinaryId: id});
-        }  else if(id.includes('stable2')) {
+        }  else if(id.includes('Solberg_Gard')) {
             deletedPost = await ImageSt2.findOneAndDelete({cloudinaryId: id});
         }
 

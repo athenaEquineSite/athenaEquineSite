@@ -7,13 +7,12 @@ export default async function addPost(req: NextApiRequest, res: NextApiResponse)
     if(req.method === "POST") {
         await dbConnect();
 
-        const { title, body } = req.body;
+        const { eng, nor } = req.body;
         
-        if(title.length === 0) throw new Error("Title cannot be empty.");
-        if(body.length === 0) throw new Error("Body cannot be empty.");
+        if(eng.title.length === 0 || nor.title.length === 0) throw new Error("Title cannot be empty.");
+        if(eng.postBody.length === 0 || eng.postBody.length === 0) throw new Error("Body cannot be empty.");
 
-        const newPost = new PostModel(title, body).showPost();
-
+        const newPost = new PostModel(eng, nor).showPost();
         const postToDb = await Post.create(newPost);
 
         return res.status(200).json(postToDb);

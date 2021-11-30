@@ -22,13 +22,13 @@ function AddPost() {
         event.preventDefault();
         const addPost = await fetch(`${server}/api/posts/add`, {
             body: JSON.stringify({
-                en: {
+                eng: {
                     title: event.target.titleEn.value,
-                    body: event.target.bodyEn.value
+                    postBody: event.target.bodyEn.value
                 },
-                no: {
+                nor: {
                     title: event.target.titleNo.value,
-                    body: event.target.bodyNo.value
+                    postBody: event.target.bodyNo.value
                 }
                 
             }),
@@ -43,6 +43,7 @@ function AddPost() {
         <div>
             <form onSubmit={handleForm}>
                 <div>
+                    <h3>Add post in english: </h3>
                     <label htmlFor="titleEn">Title: </label>
                     <input type="text" id="titleEn" name="titleEn" required/>
                     
@@ -50,11 +51,12 @@ function AddPost() {
                     <textarea id="bodyEn" name="bodyEn" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
                 </div>
                 <div>
-                <label htmlFor="titleNo">Title: </label>
-                <input type="text" id="titleNo" name="titleNo" required/>
-                
-                <label htmlFor="bodyNo">Body: </label>
-                <textarea id="bodyNo" name="bodyNo" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
+                    <h3>Add post in norwegian: </h3>
+                    <label htmlFor="titleNo">Title: </label>
+                    <input type="text" id="titleNo" name="titleNo" required/>
+                    
+                    <label htmlFor="bodyNo">Body: </label>
+                    <textarea id="bodyNo" name="bodyNo" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
                 </div>
 
                 

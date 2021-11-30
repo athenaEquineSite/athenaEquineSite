@@ -11,6 +11,7 @@ type NextApiRequestWithFile = NextApiRequest & {
 }
 
 async function uploadImage(req: NextApiRequestWithFile, res: NextApiResponse) {
+
     await dbConnect();
         upload.single('image')(req, {}, async err => {
             const folderName = req.body.selection;
@@ -27,10 +28,10 @@ async function uploadImage(req: NextApiRequestWithFile, res: NextApiResponse) {
                 createdAt: new Date()
             }
             
-            if(folderName === 'stable1') { 
+            if(folderName === 'Stall_Kolbjornrud_Hestepensjonat') { 
                 await ImageSt1.create(imageOptions);
             }
-            if(folderName === 'stable2') { 
+            if(folderName === 'Solberg_Gard') { 
                 await ImageSt2.create(imageOptions);
             }
             return res.json({cloudinaryId: uploadResult.public_id, url: uploadResult.secure_url})

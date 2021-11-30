@@ -7,7 +7,7 @@ import dbConnect from '../../../utils/dbConnect';
 
 function Upload() {
     const [image, setImage] = useState();
-    const [selection, setSelection] = useState('stable1');
+    const [selection, setSelection] = useState('Stall_Kolbjornrud_Hestepensjonat');
 
     const { mutate: uploadImage } = useMutate({
         verb: 'POST',
@@ -47,9 +47,9 @@ function Upload() {
 
     return (
         <div>
-            <select onChange={handleSelect} defaultValue="stable1" name="chooseStable" id="chooseStable">
-                <option value="stable1">Stable1</option>
-                <option value="stable2">Stable2</option>
+            <select onChange={handleSelect} defaultValue="Stall_Kolbjornrud_Hestepensjonat" name="chooseStable" id="chooseStable">
+                <option value="Stall_Kolbjornrud_Hestepensjonat">Stall Kolbjornrud Hestepensjonat</option>
+                <option value="Solberg_Gard">Solberg Gard</option>
             </select>
             <input onChange={handleChange} accept=".jpg, .png, .jpeg" type="file" placeholder="Choose file"/>
             <div>
