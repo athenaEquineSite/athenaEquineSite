@@ -4,6 +4,7 @@ import { verify } from 'jsonwebtoken';
 import { jwtSecret } from '../../../utils/env';
 import User from '../../../models/User';
 import dbConnect from '../../../utils/dbConnect';
+import Link from 'next/link';
 
 function Upload() {
     const [image, setImage] = useState();
@@ -47,6 +48,7 @@ function Upload() {
 
     return (
         <div>
+            <Link href="/aeas/dashboard"><a>Go Back</a></Link>
             <select onChange={handleSelect} defaultValue="Stall_Kolbjornrud_Hestepensjonat" name="chooseStable" id="chooseStable">
                 <option value="Stall_Kolbjornrud_Hestepensjonat">Stall Kolbjornrud Hestepensjonat</option>
                 <option value="Solberg_Gard">Solberg Gard</option>

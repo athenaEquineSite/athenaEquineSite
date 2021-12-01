@@ -7,6 +7,7 @@ import ImageSt2 from '../../../models/ImageSt2';
 import ImageContainer from '../../../components/dashboard/ImageContainer';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Gallery({stable1Img, stable2Img}) {
 
@@ -48,6 +49,7 @@ export default function Gallery({stable1Img, stable2Img}) {
 
     return (
         <div className={`row`}>
+            <Link href="/aeas/dashboard"><a>Go Back</a></Link>
             <div className={`col-6`}>
                 <h1>Stall Kolbjornrud Hestepensjonat</h1>
                 <div>

@@ -2,10 +2,11 @@ import PostList from '../../../components/PostList';
 import dbConnect from '../../../utils/dbConnect';
 import Post from '../../../models/Post';
 import { verify } from 'jsonwebtoken';
-import { jwtSecret, server } from '../../../utils/env';
+import { jwtSecret, server, deployHookURL } from '../../../utils/env';
 import User from '../../../models/User';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function Posts({posts}) {
 
@@ -32,7 +33,9 @@ function Posts({posts}) {
                 'Content-Type': 'application/json'
             }
         });
-        
+        const deploy = await fetch(`${deployHookURL}`, {
+            method: 'GET'
+        });
         router.reload();        
     }
 
@@ -40,6 +43,7 @@ function Posts({posts}) {
     return (
         
         <div>
+            <Link href="/aeas/dashboard"><a>Go Back</a></Link>
             <PostList posts={postData} onDelete={handleDeleteButton}/>
         </div>
     )

@@ -20,6 +20,7 @@ console.log(news)
 
     return (
         <div className={`${styles.newsFullWrapper}`}>
+            <Link href="/news"><a>Go Back</a></Link>
             <div className={`${styles.newsFullHeaderWrapper}`}>
                 <Link href="/news"><a className={`${styles.goBack}`}>Go Back</a></Link>
                 <h1 className={`${styles.newsFullTitle}`}>{isNor ? news.nor.title : news.eng.title}</h1>

@@ -1,12 +1,13 @@
 import { server } from '../../../utils/env';
 import { useRouter } from 'next/router';
 import { verify } from 'jsonwebtoken';
-import { jwtSecret } from '../../../utils/env';
+import { jwtSecret, deployHookURL } from '../../../utils/env';
 import User from '../../../models/User';
 import { useEffect } from 'react';
+import Link from 'next/link';
+
 
 function AddPost() {
-
     useEffect(() => {
         if(document.body.classList.contains('solbergBackground')) {
           document.body.classList.remove('solbergBackground')    
@@ -37,10 +38,14 @@ function AddPost() {
             },
             method: 'POST'
         });
+        const deploy = await fetch(`${deployHookURL}`, {
+            method: 'GET'
+        });
         router.push('/aeas/dashboard');
     }
     return (
         <div>
+            <Link href="/aeas/dashboard"><a>Go Back</a></Link>
             <form onSubmit={handleForm}>
                 <div>
                     <h3>Add post in english: </h3>
@@ -87,7 +92,7 @@ export const getServerSideProps = async (context) => {
             }
         }
     }
-
+    
     return {
         props: {}
     }
