@@ -3,8 +3,11 @@ import Post from '../../models/Post';
 import styles from '../../styles/News.module.scss';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { useLang } from '../../context/LanguageProvider';
 
 function News({news}) {
+
+    const isNor = useLang();
 
     useEffect(() => {
         if(document.body.classList.contains('solbergBackground')) {
@@ -19,11 +22,11 @@ function News({news}) {
         <div className={`${styles.newsFullWrapper}`}>
             <div className={`${styles.newsFullHeaderWrapper}`}>
                 <Link href="/news"><a className={`${styles.goBack}`}>Go Back</a></Link>
-                <h1 className={`${styles.newsFullTitle}`}>{news.title}</h1>
+                <h1 className={`${styles.newsFullTitle}`}>{isNor ? news.nor[0].title : news.eng[0].title}</h1>
                 <h5 className={`${styles.newsFullDate}`}>{(new Date(news.date)).toDateString()}</h5>
             </div>
             <div className={`${styles.newsFullBodyWrapper}`}>
-                <p className={`${styles.newsFullBody}`}>{news.body}</p>
+                <p className={`${styles.newsFullBody}`}>{isNor ? news.nor[0].postBody : news.eng[0].postBody}</p>
             </div>
             
         </div>
