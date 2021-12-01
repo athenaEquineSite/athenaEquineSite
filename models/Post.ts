@@ -1,14 +1,15 @@
 import mongoose, { Schema } from 'mongoose';
 
-const BodySchema = new Schema({
-   title:  {type: String, required: true},
-   postBody: {type: String, required: true}
-});
-
 const PostSchema = new Schema({
     postId: {type: String, required: true},
-    eng: BodySchema,
-    nor: BodySchema,
+    eng: {
+        title: {type: String, required: true},
+        postBody: {type: String, rrequired: true}
+    },
+    nor: {
+        title: {type: String, required: true},
+        postBody: {type: String, rrequired: true}
+    },
     date: {type: Date, required: true}
 });
 PostSchema.set('toJSON', {virtuals: true});

@@ -7,7 +7,6 @@ import { useContext, useEffect } from 'react';
 import { useLang } from '../../context/LanguageProvider';
 
 function Newses({news}) {
-
   useEffect(() => {
     if(document.body.classList.contains('solbergBackground')) {
       document.body.classList.remove('solbergBackground')    
@@ -34,7 +33,6 @@ export const getStaticProps = async () => {
   await dbConnect();
   const posts = await Post.find({});
   const news = JSON.parse(JSON.stringify(posts))
-  
     return {
       props: {
         news: news

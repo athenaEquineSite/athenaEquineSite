@@ -8,7 +8,7 @@ const Post = ({post}) => {
     return (
         <Link href="/aeas/posts/[id]" as={`/aeas/posts/${post.postId}`} >
             <a>
-                <h3>{isNor ? post.nor[0].title : post.eng[0].title}</h3>
+                <h3>{isNor ? post.nor.title : post.eng.title}</h3>
             </a>
         </Link>
     )

@@ -25,9 +25,9 @@ function PostPage({post}) {
         <div className={`${styles.post} row`}>
             <div className={`${styles.titleContainer} row col-1`}>
                 <Link href="/aeas/posts"><a className={styles.goBack}>Go back</a></Link>
-                <h1 className={styles.title}>{isNor ? post.nor[0].title : post.eng[0].title}</h1>
+                <h1 className={styles.title}>{isNor ? post.nor.title : post.eng.title}</h1>
             </div>
-            <p className={`${styles.body} col-10`}>{isNor ? post.nor[0].postBody : post.eng[0].postBody}</p>
+            <p className={`${styles.body} col-10`}>{isNor ? post.nor.postBody : post.eng.postBody}</p>
             <Link href="/aeas/posts"><a className={`${styles.goBack} col-1`}>Go back</a></Link>
         </div>
     )
