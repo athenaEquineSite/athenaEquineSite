@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from 'react';
 
-const LangContext = createContext(false);
+const LangContext = createContext(true);
 const LangUpdateContext = createContext(null!);
 
 export const useLang = () => {
@@ -12,7 +12,7 @@ export const useLangUpdate = () => {
 }
 
 export const LanguageProvider = ({children}) => {
-    const [isNor, setIsNor] = useState(false);
+    const [isNor, setIsNor] = useState(true);
 
     const langIsNor = () => {
         setIsNor(true);

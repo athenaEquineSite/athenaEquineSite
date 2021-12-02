@@ -37,7 +37,7 @@ export const Footer = () => {
                 </ul>
             </div>
             <div className={`${styles.copyright}`}>
-                <p>Copyright &copy; 2021 - Athena Aquine AS</p>
+                <p>Copyright &copy; 2021 - Athena Equine AS</p>
             </div>
         </footer>
     )

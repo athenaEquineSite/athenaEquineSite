@@ -1,3 +1,4 @@
+import styles from '../../../styles/Gallery/Gallery.module.scss';
 import { verify } from 'jsonwebtoken';
 import { useState } from 'react';
 import { jwtSecret, server } from '../../../utils/env';
@@ -49,7 +50,7 @@ export default function Gallery({stable1Img, stable2Img}) {
 
     return (
         <div className={`row`}>
-            <Link href="/aeas/dashboard"><a>Go Back</a></Link>
+            <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
             <div className={`col-6`}>
                 <h1>Stall Kolbjornrud Hestepensjonat</h1>
                 <div>

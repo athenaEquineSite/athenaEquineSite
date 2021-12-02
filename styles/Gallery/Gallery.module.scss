@@ -46,6 +46,15 @@
   }
 }
 
+.goBack {
+  text-decoration: none;
+  color: $font-color;
+  box-shadow: inset 0 0 5px 5px $container-background;
+  padding: 10px;
+  margin: 10px;
+  width: 7vw;
+}
+
 @media screen and (max-width: 767px) {
   .galleryContainer .imageList {
     grid-template-columns: repeat(2, 1fr);
