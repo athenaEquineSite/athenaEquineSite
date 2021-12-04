@@ -10,6 +10,8 @@ const storage = multer.diskStorage({
     }
 });
 */
+
+const maxSize = 500 * 1024;
 const storage = multer.memoryStorage();
 
 const ALLOWED_FORMATS = ['image/jpg', 'image/jpeg', 'image/png'];
@@ -20,5 +22,8 @@ export const upload = multer({
         if(ALLOWED_FORMATS.includes(file.mimetype)) {
             cb(null, true);
         } else cb(new Error('Not supported file type'), false)
+    },
+    limits: {
+        fileSize: maxSize
     }
 });
