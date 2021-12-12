@@ -110,7 +110,7 @@ function Upload() {
                 <button onClick={handleUpload} disabled={!image}>Upload</button>
             </div>
             <div>
-                <h2 className={`${styles.uploadInfo}`}>If status below is <span>Not uploaded</span> it means upload didn't finish or even it didn't started. ;)</h2>
+                <h2 className={`${styles.uploadInfo}`}>If status below is <span>Not uploaded</span> it means upload didn&apos;t finish or even it didn&apos;t started. ;)</h2>
                 {inputStatus.success ? <h3 className={`${styles.uploadInfoTrue}`}>{inputStatus.message}</h3> : <h3 className={`${styles.uploadInfoFalse}`}>{inputStatus.message}</h3>}
                 {uploadStatus.success ? <h3 className={`${styles.uploadInfoTrue}`}>{uploadStatus.message}</h3> : <h3 className={`${styles.uploadInfoFalse}`}>{uploadStatus.message}</h3>}
             </div>
