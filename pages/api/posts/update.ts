@@ -55,7 +55,7 @@ export default async function updatePost(req: NextApiRequestWithFile, res: NextA
                     postBody: nor.postBody
                 }
             });
-            return res.status(200).json(updatePost);
+            return res.status(200).json({postTextData: updatePost, message: "Upload successful", success: true});
         });
 }
 

@@ -159,7 +159,7 @@ const EditPost = ({ post }) => {
         }
 
         const deploy = await fetch(`${deployHookURL}`, {
-            method: 'GET'
+            method: 'POST'
         });
         
         router.push('/aeas/dashboard');
