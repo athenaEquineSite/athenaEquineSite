@@ -10,6 +10,8 @@ const PostSchema = new Schema({
         title: {type: String, required: true},
         postBody: {type: String, rrequired: true}
     },
+    cloudinaryId: {type: String},
+    cloudinaryUrl: {type: String},
     date: {type: Date, required: true}
 });
 PostSchema.set('toJSON', {virtuals: true});

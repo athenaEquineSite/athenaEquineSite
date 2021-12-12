@@ -49,15 +49,15 @@ export default function Gallery({stable1Img, stable2Img}) {
     }
 
     return (
-        <div className={`row`}>
+        <div className={`row ${styles.viewImages}`}>
             <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
-            <div className={`col-6`}>
+            <div>
                 <h1>Stall Kolbjornrud Hestepensjonat</h1>
                 <div>
                     <ImageContainer handleDelete={handleDelete} images={stable1Images}/>
                 </div>
             </div>
-            <div className={`col-6`}>
+            <div>
                 <h1>Solberg Gard</h1>
                 <div>
                     <ImageContainer handleDelete={handleDelete} images={stable2Images}/>

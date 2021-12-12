@@ -1,3 +1,4 @@
+import styles from '../../../styles/Dashboard/Post.module.scss';
 import PostList from '../../../components/PostList';
 import dbConnect from '../../../utils/dbConnect';
 import Post from '../../../models/Post';
@@ -43,7 +44,7 @@ function Posts({posts}) {
     return (
         
         <div>
-            <Link href="/aeas/dashboard"><a>Go Back</a></Link>
+            <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
             <PostList posts={postData} onDelete={handleDeleteButton}/>
         </div>
     )

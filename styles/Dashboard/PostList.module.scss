@@ -3,6 +3,9 @@
 .postList {
   padding: 10px;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   button {
     cursor: pointer;
   }
@@ -11,12 +14,33 @@
   margin: 10px;
   padding: 5px;
   display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    color: $font-color;
+  }
 }
 
 .editPost {
   text-decoration: none;
-  color: $font-color;
   cursor: pointer;
   border: 1px solid $font-color;
-  margin: 10px;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: green;
+  span {
+    text-align: center;
+    color: $font-color;
+    width: 100%;
+  }
+}
+.deleteBtn {
+  background-color: red;
+  border: 1px solid $font-color;
+  padding: 5px;
+  span {
+    text-align: center;
+    color: $font-color;
+    width: 100%;
+  }
 }

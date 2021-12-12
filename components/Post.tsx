@@ -1,3 +1,4 @@
+import styles from '../styles/Dashboard/Post.module.scss';
 import Link from 'next/link';
 import { useLang } from '../context/LanguageProvider';
 
@@ -7,7 +8,7 @@ const Post = ({post}) => {
 
     return (
         <Link href="/aeas/posts/[id]" as={`/aeas/posts/${post.postId}`} >
-            <a>
+            <a className={`${styles.viewPost}`}>
                 <h3>{isNor ? post.nor.title : post.eng.title}</h3>
             </a>
         </Link>

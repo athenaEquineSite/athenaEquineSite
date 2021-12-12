@@ -2,6 +2,7 @@ import dbConnect from '../../utils/dbConnect';
 import Post from '../../models/Post';
 import styles from '../../styles/News.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from 'react';
 import { useLang } from '../../context/LanguageProvider';
 
@@ -27,6 +28,7 @@ console.log(news)
                 <h5 className={`${styles.newsFullDate}`}>{(new Date(news.date)).toDateString()}</h5>
             </div>
             <div className={`${styles.newsFullBodyWrapper}`}>
+                {news.cloudinaryId ? <Image src={news.cloudinaryUrl} width={400} height={200} alt="news_image" objectFit="contain" /> : null}
                 <p className={`${styles.newsFullBody}`}>{isNor ? news.nor.postBody : news.eng.postBody}</p>
             </div>
             

@@ -6,19 +6,19 @@ import ImageSt1 from '../../../models/ImageSt1';
 import ImageSt2 from '../../../models/ImageSt2';
 import dbConnect from '../../../utils/dbConnect';
 
-type NextApiRequestWithFile = NextApiRequest & {
+export type NextApiRequestWithFile = NextApiRequest & {
     file: unknown
 }
 
 async function uploadImage(req: NextApiRequestWithFile, res: NextApiResponse) {
-
     await dbConnect();
         upload.single('image')(req, {}, async err => {
             const folderName = req.body.selection;
-
-            if(!req.file) throw new Error('No file uploaded.');
+            
+            let image1loaded, image2loaded;
+            if(!req.file) return res.status(422).json({message: "Upload failed", success: false});
             if(err) return res.status(422).json(err.message);
-
+            
             const file64 = formatBufferTo64(req.file);
             const uploadResult = await cloudinaryUpload(file64.content, folderName);
 
@@ -29,12 +29,12 @@ async function uploadImage(req: NextApiRequestWithFile, res: NextApiResponse) {
             }
             
             if(folderName === 'Stall_Kolbjornrud_Hestepensjonat') { 
-                await ImageSt1.create(imageOptions);
+                image1loaded = await ImageSt1.create(imageOptions);
             }
             if(folderName === 'Solberg_Gard') { 
-                await ImageSt2.create(imageOptions);
+                image2loaded = await ImageSt2.create(imageOptions);
             }
-            return res.json({cloudinaryId: uploadResult.public_id, url: uploadResult.secure_url})
+            return res.json({cloudinaryId: uploadResult.public_id, url: uploadResult.secure_url, kolbjornrud: image1loaded, solberg: image2loaded, message: "Upload successful", success: true})
         });
 }
 

@@ -2,6 +2,7 @@ import stylesHome from '../styles/Home.module.scss';
 import text from '../utils/textContent.json';
 import { useLang } from '../context/LanguageProvider';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   
@@ -21,7 +22,7 @@ export default function Home() {
 
       <div className={stylesHome.home}>
         <div className={stylesHome.companyPicture}>
-          <img src="/group.JPG" alt="groupPhoto"/>
+          <Image src="/front.jpg" width={400} height={300} objectFit="contain" alt="groupPhoto"/>
         </div>
         <h3 className={stylesHome.companyMotto}>{isNor ? text.nor.home.companyMotto : text.eng.home.companyMotto}</h3>
         <div className={stylesHome.companyDescription}>

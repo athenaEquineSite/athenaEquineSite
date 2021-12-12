@@ -35,7 +35,7 @@ export const getStaticProps = async () => {
   const news = JSON.parse(JSON.stringify(posts))
     return {
       props: {
-        news: news
+        news: news,
       }
     }
   }

@@ -4,7 +4,7 @@ import styles from '../styles/News.module.scss';
 const NewsList = ({posts}) => {
     return (
         <div className={`${styles.newsList}`}>
-        {posts.map((post) => (
+        {posts.reverse().map((post) => (
             <News key={post.postId} news={post}/>
         ))}
         </div>

@@ -16,10 +16,12 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     if(password === null || undefined) return res.status(404).json({message: 'No password, pass the password.'});
 
     const searchedUser = await User.findOne({ username });
+    console.log(searchedUser)
 
     if (!searchedUser) return res.status(404).json({ message: "No such user." });
 
     const match = await compare(password, searchedUser.password);
+    console.log(match)
 
     if (match) {
       const claims = { sub: searchedUser.userId }
