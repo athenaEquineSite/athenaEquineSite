@@ -19,6 +19,10 @@ const Map = () => {
                     <Marker 
                         position={{lat: 59.656156123275935, lng: 11.323922898606517}}
                         onClick={() => setSelectedMarker(true)}
+                        icon={{
+                            url: '/LOGO.png',
+                            scaledSize: new google.maps.Size(50, 50)
+                        }}
                     />
                     {selectedMarker && (
                         <InfoWindow position={{lat: 59.656156123275935, lng: 11.323922898606517}} onCloseClick={() => setSelectedMarker(false)}>
