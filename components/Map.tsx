@@ -3,19 +3,12 @@ import { GoogleMap, useLoadScript, Marker, InfoWindow } from '@react-google-maps
 import { useState } from 'react';
 import { googleKey } from '../utils/env';
 
-const libraries = ["places"]
 const Map = () => {
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: googleKey,
-        libraries: libraries
     });
     const [selectedMarker, setSelectedMarker] = useState(false);
     
-    if(loadError) return "Error loading maps";
-    if(!isLoaded) return "Loading Maps";
- 
-
-
     return (
         <div className={`${styles.mapWrapper}`}>
             <GoogleMap 
