@@ -11,7 +11,7 @@ const Map = () => {
     
     return (
         <div className={`${styles.mapWrapper}`}>
-            {!isLoaded && (<div>Map loading</div>)}
+            {loadError && (<div>Map loading</div>)}
             <GoogleMap 
                 mapContainerStyle={{width: "100%", height: "100%"}} 
                 zoom={12} 
