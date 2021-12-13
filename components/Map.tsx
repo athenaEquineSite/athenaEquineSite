@@ -19,7 +19,11 @@ const Map = () => {
                         position={{lat: 59.656156123275935, lng: 11.323922898606517}}
                         icon={{
                             url: '/LOGO.png',
-                            scaledSize: new google.maps.Size(50, 50)
+                            size: {
+                                height: 50,
+                                width: 50,
+                                equals: null
+                            }
                         }}
                         onClick={() => setSelectedMarker(true)}
                     />
