@@ -1,7 +1,7 @@
 import styles from '../../../styles/Dashboard/Post.module.scss';
 import { useRouter } from 'next/router';
 import { verify } from 'jsonwebtoken';
-import { jwtSecret, deployHookURL } from '../../../utils/env';
+import { jwtSecret, deployHookURL, server } from '../../../utils/env';
 import User from '../../../models/User';
 import { useEffect, useState } from 'react';
 import { useMutate } from 'restful-react';
@@ -19,9 +19,12 @@ function AddPost() {
         message: 'No file',
         success: false
     });
+
+    const base = server;
     const { mutate: uploadForm } = useMutate({
         verb: 'POST',
-        path: 'api/posts/add'
+        path: 'api/posts/add',
+        base
     });
 
     useEffect(() => {

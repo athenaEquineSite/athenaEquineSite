@@ -33,7 +33,8 @@ export default function Gallery({stable1Img, stable2Img}) {
                 id: id
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             }
         })
         const result = await res.json();

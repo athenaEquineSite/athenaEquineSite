@@ -11,7 +11,6 @@ import User from '../../../../../models/User';
 import Post from '../../../../../models/Post';
 
 const EditPost = ({ post }) => {
-    console.log(post);
 
     const [existingImage, setExistingImage] = useState(true);
     const [updatedImage, setUpdatedImage] = useState();
@@ -32,10 +31,11 @@ const EditPost = ({ post }) => {
             document.body.classList.remove('kolbjornrudBackground')
         }
     });
-
+    const base = server;
     const { mutate: uploadForm } = useMutate({
         verb: 'PATCH',
-        path: 'api/posts/update'
+        path: 'api/posts/update',
+        base
     });
 
     const router = useRouter();
@@ -98,7 +98,8 @@ const EditPost = ({ post }) => {
                 id: id
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             }
         })
         const result = await res.json();

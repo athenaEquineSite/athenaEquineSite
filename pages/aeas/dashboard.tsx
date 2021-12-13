@@ -11,7 +11,7 @@ function Dashboard() {
     const router = useRouter();
 
     const logOut = async () => {
-        const res = await fetch(`${server}/api/logout`, { method: "POST" });
+        const res = await fetch(`${server}/api/logout`, { method: "POST", headers: {'Access-Control-Allow-Origin': '*'} });
         router.push('/aeas');
     }
 

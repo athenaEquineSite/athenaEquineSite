@@ -18,10 +18,11 @@ function Upload() {
         message: 'No file',
         success: false
     })
-
+    const base = server;
     const { mutate: uploadImage } = useMutate({
         verb: 'POST',
-        path: 'api/gallery/upload'
+        path: 'api/gallery/upload',
+        base
     });
 
     useEffect(() => {

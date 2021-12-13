@@ -27,7 +27,8 @@ function Login() {
                 password: event.target.password.value
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             },
             method: 'POST'
         });

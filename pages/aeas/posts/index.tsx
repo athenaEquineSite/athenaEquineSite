@@ -31,7 +31,8 @@ function Posts({posts}) {
                 postId: postId
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             }
         });
         const deploy = await fetch(`${deployHookURL}`, {

@@ -5,7 +5,7 @@ import { cloudinaryDelete } from '../../../utils/cloudinary';
 
 export default async function deleteImage(req: NextApiRequest, res: NextApiResponse) {
     if(req.method === "DELETE") {
-        const {postId, id } = JSON.parse(req.body);
+        const {postId, id } = req.body;
         if(!id) throw new Error('No pic to delete.');
         if(!postId) throw new Error('No post');
 
