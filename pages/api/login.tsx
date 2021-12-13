@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next"
+import withCors from '../../middleware/cors_middleware';
 import dbConnect from "../../utils/dbConnect"
 import User from '../../models/User';
 import { compare } from 'bcrypt';
@@ -6,7 +7,7 @@ import { sign } from 'jsonwebtoken';
 import cookie from 'cookie';
 import { jwtSecret } from '../../utils/env';
 
-export default async function login(req: NextApiRequest, res: NextApiResponse) {
+async function login(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'POST') {
     await dbConnect();
@@ -43,3 +44,5 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).json({ message: 'Not a POST method, only POST method supported.' });
   }
 }
+
+export default withCors(login);

@@ -1,9 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import withCors from '../../../middleware/cors_middleware';
 import ImageSt1 from '../../../models/ImageSt1';
 import ImageSt2 from '../../../models/ImageSt2';
 import { cloudinaryDelete } from '../../../utils/cloudinary';
 
-export default async function deleteImage(req: NextApiRequest, res: NextApiResponse) {
+async function deleteImage(req: NextApiRequest, res: NextApiResponse) {
     if(req.method === "DELETE") {
         const id = req.body.id;
         if(!id) throw new Error('No post to delete.');
@@ -22,3 +23,5 @@ export default async function deleteImage(req: NextApiRequest, res: NextApiRespo
     }
     return res.status(405).json({message: "Only DELETE method allowed."});
 }
+
+export default withCors(deleteImage);

@@ -8,7 +8,7 @@ import { useMutate } from 'restful-react';
 import Link from 'next/link';
 
 
-function AddPost() {
+const AddPost = () => {
 
     const [postImage, setPostImage] = useState();
     const [uploadStatus, setUploadStatus] = useState({
