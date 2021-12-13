@@ -23,4 +23,4 @@ async function deleteImage(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({message: "Only DELETE method allowed."});
 }
 
-export default withCors(deleteImage);
+export default deleteImage;
