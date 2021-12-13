@@ -94,6 +94,7 @@ const EditPost = ({ post }) => {
         const res = await fetch(`${server}/api/posts/deleteImage`, {
             method: 'DELETE',
             body: JSON.stringify({
+                postId: post.postId,
                 id: id
             }),
             headers: {
@@ -148,7 +149,6 @@ const EditPost = ({ post }) => {
 
 
         const uploadedForm = await uploadForm(formData);
-        console.log(uploadedForm)
         if(uploadedForm.success) {
             setUploadStatus({
                 ...uploadStatus,
