@@ -20,3 +20,28 @@
     margin-top: 20px;
   }
 }
+
+.mapWrapper {
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.loadingElement {
+  height: 100%;
+  width: 50%;
+}
+
+.containerElement {
+  height: 100%;
+  width: 100%;
+}
+
+.mapElement {
+  height: 100%;
+  width: 100%;
+}
+
+.infoWindowInfo {
+  color: black;
+}
