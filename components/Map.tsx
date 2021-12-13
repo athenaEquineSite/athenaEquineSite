@@ -17,14 +17,6 @@ const Map = () => {
                 center={{lat: 59.656156123275935, lng: 11.323922898606517}}>
                     <Marker 
                         position={{lat: 59.656156123275935, lng: 11.323922898606517}}
-                        icon={{
-                            url: '/LOGO.png',
-                            size: {
-                                height: 50,
-                                width: 50,
-                                equals: null
-                            }
-                        }}
                         onClick={() => setSelectedMarker(true)}
                     />
                     {selectedMarker && (
