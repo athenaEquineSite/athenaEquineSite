@@ -38,6 +38,7 @@ async function login(req: NextApiRequest, res: NextApiResponse) {
         secure: process.env.NODE_ENV !== 'development',
         sameSite: 'none',
         maxAge: 3600,
+        domain: 'stadninanxt.vercel.app',
         path: '/'
       }));
 
