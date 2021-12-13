@@ -36,7 +36,7 @@ async function login(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Set-Cookie', cookie.serialize('auth', jwt, {
         httpOnly: true,
         secure: process.env.NODE_ENV !== 'development',
-        sameSite: 'none',
+        sameSite: 'strict',
         maxAge: 3600,
         path: '/'
       }));
