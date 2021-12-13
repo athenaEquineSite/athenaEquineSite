@@ -4,14 +4,15 @@ import { useState } from 'react';
 import { googleKey } from '../utils/env';
 
 const Map = () => {
+    /*
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: googleKey,
     });
+    */
     const [selectedMarker, setSelectedMarker] = useState(false);
     
     return (
         <div className={`${styles.mapWrapper}`}>
-            {loadError && (<div>Map loading</div>)}
             <GoogleMap 
                 mapContainerStyle={{width: "100%", height: "100%"}} 
                 zoom={12} 

@@ -1,8 +1,8 @@
 import styles from '../styles/Contact.module.scss';
+import Map from '../components/Map';
 import { TextContext } from '../context/TextContext';
 import { useContext, useEffect } from 'react';
 import { useLang } from '../context/LanguageProvider';
-import Map from '../components/Map';
 
 function Contact() {
 
