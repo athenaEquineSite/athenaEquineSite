@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import withCors from '../../middleware/cors_middleware';
+import { NextApiRequest, NextApiResponse } from "next";
+import NextCors from 'nextjs-cors';
 import dbConnect from "../../utils/dbConnect"
 import User from '../../models/User';
 import { compare } from 'bcrypt';
@@ -8,6 +8,11 @@ import cookie from 'cookie';
 import { jwtSecret } from '../../utils/env';
 
 async function login(req: NextApiRequest, res: NextApiResponse) {
+  await NextCors(req, res, {
+    methods:['GET', 'POST', 'DELETE', 'PATCH'],
+    origin: '*',
+    optionSuccessStatus: 200
+});
 
   if (req.method === 'POST') {
     await dbConnect();
@@ -45,4 +50,4 @@ async function login(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withCors(login);
+export default login;
