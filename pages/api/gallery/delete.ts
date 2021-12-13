@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import withCors from '../../../middleware/cors_middleware';
 import ImageSt1 from '../../../models/ImageSt1';
 import ImageSt2 from '../../../models/ImageSt2';
 import { cloudinaryDelete } from '../../../utils/cloudinary';
