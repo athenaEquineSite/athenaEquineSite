@@ -26,7 +26,7 @@ function News({news}) {
                 <h5 className={`${styles.newsFullDate}`}>{(new Date(news.date)).toDateString()}</h5>
             </div>
             <div className={`${styles.newsFullBodyWrapper}`}>
-                {news.cloudinaryId ? <Image src={news.cloudinaryUrl} width={400} height={200} alt="news_image" objectFit="contain" /> : null}
+                {news.cloudinaryId ? <div className={`${styles.imageContainer}`}><div className={`${styles.imageWrapper}`}><Image src={news.cloudinaryUrl} width={news.imageDimensions.width/4} height={news.imageDimensions.height/4} alt="news_image" objectFit="fill" /></div></div> : null}
                 <p className={`${styles.newsFullBody}`}>{isNor ? news.nor.postBody : news.eng.postBody}</p>
             </div>
             

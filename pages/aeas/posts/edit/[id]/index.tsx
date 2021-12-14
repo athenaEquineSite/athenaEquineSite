@@ -125,7 +125,11 @@ const EditPost = ({ post }) => {
                     postBody: event.target.postBodyUpdateNorwegian.value
                 },
                 cloudinaryId: post.cloudinaryId,
-                cloudinaryUrl: post.cloudinaryUrl
+                cloudinaryUrl: post.cloudinaryUrl,
+                imageDimensions: {
+                    width: post.imageDimensions.width,
+                    height: post.imageDimensions.height
+                }
             }
         }
         formTextUpdatedData = {

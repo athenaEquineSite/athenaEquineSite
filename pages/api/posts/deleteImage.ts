@@ -12,11 +12,12 @@ export default async function deleteImage(req: NextApiRequest, res: NextApiRespo
         const deletedPost = await Post.findOne({postId: postId});
         deletedPost.cloudinaryId = undefined;
         deletedPost.cloudinaryUrl = undefined;
+        deletedPost.imageDimensions = undefined;
         await deletedPost.save();
 
         const cloudResult = await cloudinaryDelete(id);
 
-        return res.json({message: 'Delete succesfull'});
+        return res.status(204).json({message: 'Delete succesfull'});
 
     }
     return res.status(405).json({message: "Only DELETE method allowed."});

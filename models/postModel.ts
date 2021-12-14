@@ -8,6 +8,10 @@ interface IBody {
 interface IPostImage {
     cloudinaryId: String;
     cloudinaryUrl: String;
+    imageDimensions: {
+        width: Number,
+        height: Number
+    }
 }
 
 export class PostModel {
@@ -35,6 +39,7 @@ export class PostModel {
                 nor: this.nor,
                 cloudinaryId: this.postImage.cloudinaryId,
                 cloudinaryUrl: this.postImage.cloudinaryUrl,
+                imageDimensions: this.postImage.imageDimensions,
                 date: new Date(this.date)
             }
         }

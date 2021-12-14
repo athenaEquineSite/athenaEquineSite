@@ -12,6 +12,7 @@ const PostSchema = new Schema({
     },
     cloudinaryId: {type: String},
     cloudinaryUrl: {type: String},
+    imageDimensions: {width: Number, height: Number},
     date: {type: Date, required: true}
 });
 PostSchema.set('toJSON', {virtuals: true});

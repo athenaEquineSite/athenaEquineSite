@@ -41,7 +41,6 @@ function Posts({posts}) {
         router.reload();        
     }
 
-    // paginacja na wszystkie posty w PostList
     return (
         
         <div>

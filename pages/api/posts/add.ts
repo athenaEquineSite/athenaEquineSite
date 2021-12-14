@@ -22,15 +22,20 @@ export default async function addPost(req: NextApiRequestWithFile, res: NextApiR
             if(req.file) {
                 const file64 = formatBufferTo64(req.file);
                 const uploadResult = await cloudinaryUpload(file64.content, folderName);
+                console.log(uploadResult)
     
                 const imageOptions = {
                     cloudinaryId: uploadResult.public_id,
                     cloudinaryUrl: uploadResult.secure_url,
+                    imageDimensions: {
+                        width: uploadResult.width, 
+                        height: uploadResult.height
+                    }
                 }
                 const newPost = new PostModel(eng, nor, imageOptions).showPost();
                 
                 const postImageLoaded = await Post.create(newPost);
-                
+                console.log(postImageLoaded)
                 return res.status(200).json({postTextData: postImageLoaded, message: "Upload successful", success: true});
             }
     

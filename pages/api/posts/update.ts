@@ -27,6 +27,10 @@ export default async function updatePost(req: NextApiRequestWithFile, res: NextA
                 const imageOptions = {
                     cloudinaryId: uploadResult.public_id,
                     cloudinaryUrl: uploadResult.secure_url,
+                    imageDimensions: {
+                        width: uploadResult.width,
+                        height: uploadResult.height
+                    }
                 }
                 
                 const updatePost = await Post.findOneAndUpdate({postId: postId}, {
@@ -39,7 +43,11 @@ export default async function updatePost(req: NextApiRequestWithFile, res: NextA
                         postBody: nor.postBody
                     },
                     cloudinaryId: imageOptions.cloudinaryId,
-                    cloudinaryUrl: imageOptions.cloudinaryUrl
+                    cloudinaryUrl: imageOptions.cloudinaryUrl,
+                    imageDimensions: {
+                        width: imageOptions.imageDimensions.width,
+                        height: imageOptions.imageDimensions.height
+                    }
                 });
                 
                 return res.status(200).json({postTextData: updatePost, message: "Upload successful", success: true});

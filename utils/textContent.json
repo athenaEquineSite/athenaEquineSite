@@ -90,7 +90,7 @@
     "solberg": {
       "about": {
         "title": "Solberg Gård",
-        "description": "A part of Athena's facilities, where we offer eight spacious boxes for horses and four big boxes for ponies or small horses. At Solberg, we supply every utility needed for a horse athlete and his rider: washing place, big tack room space, indoor arena with a set of obstacles, outdoor arena, both gravel and grass paddocks and fields. Solberg Gard came to be in 2009 and has been a home to a great dressage rider Jonas Elvebakk, who is still teaching here on weekly basis. Athena Equine AS also holds weekly training with Jan Harald Gulliksen, organizing events to school with the very best riders worldwide. Check our offer and be updated to see what's new."
+        "description": "A part of Athena's facilities, where we offer eight spacious boxes for horses and four big boxes for ponies or small horses. At Solberg, we supply every utility needed for a horse athlete and his rider: washing place, big tack room space, indoor arena with a set of obstacles, outdoor arena, both gravel and grass paddocks and fields. Solberg Gard came to be in 2009 and has been a home to a great dressage rider Jonas Elvebakk, who is still teaching here on weekly basis. Athena Equine AS also holds weekly training with Jon Harald Gulliksen, organizing events to school with the very best riders worldwide. Check our offer and be updated to see what's new."
       },
       "offer": {
         "title": "Solberg Gård - Offer",
@@ -172,7 +172,7 @@
             "Vi setter ut hestene i paddockene/ beitene og tar de inn på en bestemt tid på dagen",
             "Flis til underlag i boksene"
           ],
-          "price": "6500 kr/mnd"
+          "price": "6.500 kr/mnd"
         },
         "mediumList": {
           "title": "Level «MEDIUM» er «BASIC» plus: ",
@@ -183,7 +183,7 @@
             "Daglig rengjøring av paddocken ",
             "Muligheter for å bruke vaskemaskin en gang i uka"
           ],
-          "price": "8000 kr/mnd"
+          "price": "8.000 kr/mnd"
         },
         "premiumList": {
           "title": "Level «PREMIUM» er «MEDIUM» plus :",
@@ -195,7 +195,7 @@
             "Muligheter for å bruke vaskemaskin to ganger i uka",
             "Rengjøring av utstyr en gang i uken "
           ],
-          "price": "10 000 kr/mnd"
+          "price": "10.000 kr/mnd"
         },
         "usage": {
           "title": "Stall Kolbjørnrud Hestepensjonat bruker:",
@@ -214,13 +214,13 @@
     "solberg": {
       "about": {
         "title": "Solberg Gård",
-        "description": "Solberg Gård er en del av Athena’s fasiliteter, vi tilbyr åtte romslige bokser for hester og fire store bokser for ponnier eller små hester. På Solberg har vi alle fasiliteter som er nødvendig for en hest og dens rytter: vaskespilt, stort salrom, ridehus med hindre, utendørs ridebane, både grus og gresspaddocker og beiter. Solberg Gård ble startet I 2009 og her har blant annet den dyktige dressurrytteren Jonas Elvebakk bodd. Jonas er fortsatt trener her en gang i uken. Athena Equine AS har også ukentlige treninger med Jan Harald Gulliksen, som også arrangerer treninger med de beste rytterne i verden. Sjekk ut våre tilbud og hold deg oppdatert på våre nyheter."
+        "description": "Solberg Gård er en del av Athena’s fasiliteter, vi tilbyr åtte romslige bokser for hester og fire store bokser for ponnier eller små hester. På Solberg har vi alle fasiliteter som er nødvendig for en hest og dens rytter: vaskespilt, stort salrom, ridehus med hindre, utendørs ridebane, både grus og gresspaddocker og beiter. Solberg Gård ble startet I 2009 og her har blant annet den dyktige dressurrytteren Jonas Elvebakk bodd. Jonas er fortsatt trener her en gang i uken. Athena Equine AS har også ukentlige treninger med Jon Harald Gulliksen, som også arrangerer treninger med de beste rytterne i verden. Sjekk ut våre tilbud og hold deg oppdatert på våre nyheter."
       },
       "offer": {
         "title": "Solberg Gård - Tilbud",
         "liveryPack": {
           "title": "Solberg Gård pakke inkluderer:",
-          "price": "7500 kroner i måneden",
+          "price": "7.500 kroner i måneden",
           "list": [
             "morgen fôring, dekkenskift og inn- og uttaking",
             "høy ute og i paddockene",
