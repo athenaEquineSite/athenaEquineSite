@@ -28,7 +28,7 @@ function PostPage({post}) {
                 <h1 className={styles.title}>{isNor ? post.nor.title : post.eng.title}</h1>
             </div>
             <p className={`${styles.body} col-10`}>{isNor ? post.nor.postBody : post.eng.postBody}</p>
-            <Link href="/aeas/posts"><a className={`${styles.goBack} col-1`}>Go back</a></Link>
+            <Link href="/aeas/posts"><a className={`goBack col-1`}>Go back</a></Link>
         </div>
     )
 }

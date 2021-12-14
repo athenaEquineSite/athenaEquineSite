@@ -51,7 +51,7 @@ export default function Gallery({stable1Img, stable2Img}) {
 
     return (
         <div className={`row ${styles.viewImages}`}>
-            <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
+            <Link href="/aeas/dashboard"><a className={`goBack`}>Go Back</a></Link>
             <div>
                 <h1>Stall Kolbjornrud Hestepensjonat</h1>
                 <div>

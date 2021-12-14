@@ -168,7 +168,7 @@ const EditPost = ({ post }) => {
 
     return (
         <div className={`${styles.editPostWrapper}`}>
-            <Link href="/aeas/posts"><a className={`${styles.goBack}`}>Go Back</a></Link>
+            <Link href="/aeas/posts"><a className={`goBack`}>Go Back</a></Link>
             <form className={`${styles.editForm}`}>
                 {post.cloudinaryId && existingImage ? 
                     <div className={`${styles.addPostPictureWrapper}`}>

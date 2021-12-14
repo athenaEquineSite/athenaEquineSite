@@ -101,7 +101,7 @@ function Upload() {
 
     return (
         <div className={`${styles.addImage}`}>
-            <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
+            <Link href="/aeas/dashboard"><a className={`goBack`}>Go Back</a></Link>
             <select onChange={handleSelect} defaultValue="Stall_Kolbjornrud_Hestepensjonat" name="chooseStable" id="chooseStable">
                 <option value="Stall_Kolbjornrud_Hestepensjonat">Stall Kolbjornrud Hestepensjonat</option>
                 <option value="Solberg_Gard">Solberg Gard</option>

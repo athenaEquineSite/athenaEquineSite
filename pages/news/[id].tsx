@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 import { useLang } from '../../context/LanguageProvider';
 
 function News({news}) {
-console.log(news)
     const isNor = useLang();
 
     useEffect(() => {
@@ -21,9 +20,8 @@ console.log(news)
 
     return (
         <div className={`${styles.newsFullWrapper}`}>
-            <Link href="/news"><a>Go Back</a></Link>
+            <Link href="/news"><a className={`goBack`}>Go Back</a></Link>
             <div className={`${styles.newsFullHeaderWrapper}`}>
-                <Link href="/news"><a className={`${styles.goBack}`}>Go Back</a></Link>
                 <h1 className={`${styles.newsFullTitle}`}>{isNor ? news.nor.title : news.eng.title}</h1>
                 <h5 className={`${styles.newsFullDate}`}>{(new Date(news.date)).toDateString()}</h5>
             </div>

@@ -125,7 +125,7 @@ const AddPost = () => {
     }
     return (
         <div className={`${styles.addPost}`}>
-            <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
+            <Link href="/aeas/dashboard"><a className={`goBack`}>Go Back</a></Link>
             
             
             <form onSubmit={handleForm}>
@@ -152,9 +152,6 @@ const AddPost = () => {
                         <textarea id="bodyNo" name="bodyNo" cols={30} rows={10} placeholder="Type post body ..." required></textarea>
                     </div>
                 </div>
-                
-
-                
                 <button type="submit">Submit Post</button>
             </form>
             {uploadStatus.success ? <h3 className={`${styles.uploadInfoTrue}`}>{uploadStatus.message}</h3> : <h3 className={`${styles.uploadInfoFalse}`}>{uploadStatus.message}</h3>}

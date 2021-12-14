@@ -1,0 +1,23 @@
+@import './Global/variables';
+
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      list-style-type: none;
+      margin: 0 7px;
+      padding: 10px;
+      border: 1px solid $font-color;
+      cursor: pointer;
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

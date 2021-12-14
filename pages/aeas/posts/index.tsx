@@ -45,7 +45,7 @@ function Posts({posts}) {
     return (
         
         <div>
-            <Link href="/aeas/dashboard"><a className={`${styles.goBack}`}>Go Back</a></Link>
+            <Link href="/aeas/dashboard"><a className={`goBack`}>Go Back</a></Link>
             <PostList posts={postData} onDelete={handleDeleteButton}/>
         </div>
     )
