@@ -2,7 +2,7 @@ import styles from '../../../styles/Gallery/Gallery.module.scss';
 import { useState, useEffect } from 'react';
 import { useMutate } from 'restful-react';
 import { verify } from 'jsonwebtoken';
-import { jwtSecret, server } from '../../../utils/env';
+import { jwtSecret, server, deployHookURL } from '../../../utils/env';
 import User from '../../../models/User';
 import dbConnect from '../../../utils/dbConnect';
 import Link from 'next/link';
@@ -89,6 +89,10 @@ function Upload() {
                 });
                 setImage(null);
             }
+
+            const deploy = await fetch(`${deployHookURL}`, {
+                method: 'POST'
+            });
         }
         catch(err) {
             setUploadStatus({

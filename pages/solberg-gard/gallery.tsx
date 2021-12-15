@@ -36,13 +36,13 @@ const Stable2Gallery = ({stable2Img}) => {
 export default Stable2Gallery;
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     await dbConnect();
-    const stable1Img = await ImageSt2.find({});
+    const stable2Img = await ImageSt2.find({});
 
     return {
         props: {
-            stable2Img: JSON.parse(JSON.stringify(stable1Img)),
+            stable2Img: JSON.parse(JSON.stringify(stable2Img)),
         }
     }
 }

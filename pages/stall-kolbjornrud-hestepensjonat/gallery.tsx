@@ -36,7 +36,7 @@ const Stable1Gallery = ({stable1Img}) => {
 export default Stable1Gallery;
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     await dbConnect();
     const stable1Img = await ImageSt1.find({});
 
