@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className={`container`}>
-
+      
       <div className={stylesHome.home}>
         <div className={stylesHome.companyPicture}>
           <Image src="/front.jpg" width={400} height={300} objectFit="contain" alt="groupPhoto"/>

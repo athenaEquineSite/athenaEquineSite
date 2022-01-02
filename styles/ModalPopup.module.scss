@@ -1,0 +1,137 @@
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .popup {
+    background-color: #ffc90d;
+    height: 70%;
+    width: 40vw;
+    border: 3px solid #d11f1d;
+    .upperPopup {
+      height: 3vh;
+      border-bottom: 3px solid #d11f1d;
+    }
+    .middlePopup {
+      display: flex;
+      .leftBar {
+        height: calc(60vh - 3px);
+        width: 2vw;
+        border-right: 3px solid #d11f1d;
+      }
+      .centerInfo {
+        width: 100%;
+        .imageWrapper {
+          position: relative;
+          height: 50%;
+          width: 100%;
+        }
+        .infoWrapper {
+          padding: 10px;
+          height: 50%;
+          .infoTitle {
+            text-transform: uppercase;
+            color: #d11f1d;
+            font-size: 28px;
+            text-align: center;
+          }
+          .infoText {
+            padding: 10px;
+            color: #d11f1d;
+            text-align: center;
+            font-size: 22px;
+          }
+        }
+      }
+      .rightBar {
+        height: calc(60vh - 3px);
+        width: 2vw;
+        border-left: 3px solid #d11f1d;
+      }
+    }
+    .bottomPopup {
+      height: 7vh;
+      border-top: 3px solid #d11f1d;
+      a {
+        text-decoration: none;
+      }
+      .facebookLink {
+        text-transform: uppercase;
+        color: #d11f1d;
+        text-align: center;
+        font-weight: 900;
+        font-size: 26px;
+        cursor: pointer;
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 10%;
+    right: 27.25%;
+    background-color: #ffc90d;
+    height: 40px;
+    width: 40px;
+    border: 3px solid #d11f1d;
+    color: #d11f1d;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .modal .popup {
+    height: 90%;
+    width: 40vw;
+    .middlePopup {
+      height: 80%;
+      .leftBar {
+        height: 100%;
+      }
+      .rightBar {
+        height: 100%;
+      }
+    }
+  }
+  .modal .btn {
+    top: 5%;
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal .popup {
+    height: 100%;
+    width: 80vw;
+    .middlePopup {
+      height: 87%;
+      .leftBar {
+        height: 100%;
+      }
+      .rightBar {
+        height: 100%;
+      }
+    }
+  }
+  .modal .btn {
+    top: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .modal .popup .middlePopup .centerInfo .infoWrapper {
+    .infoTitle {
+      height: 40%;
+    }
+    .infoText {
+      height: 60%;
+    }
+  }
+}

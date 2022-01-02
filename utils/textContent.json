@@ -1,5 +1,10 @@
 {
   "eng": {
+    "popup": {
+      "title": "training with cian o'connor!!",
+      "desc": "Rider/Horse pairs and audience sign up open until the end of February 2022 !!!",
+      "more": "for more info - click here"
+    },
     "navigation": {
       "home": "about us",
       "kolbjornrud": {
@@ -124,6 +129,11 @@
     }
   },
   "nor": {
+    "popup": {
+      "title": "Trening med Cian O'Connor !!",
+      "desc": "Rytter/heste par og publikums påmelding åpent til slutten av februar 2022 !!!",
+      "more": "for mer info - klikk her"
+    },
     "navigation": {
       "home": "om oss",
       "kolbjornrud": {
