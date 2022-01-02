@@ -9,38 +9,32 @@ import { LanguageProvider } from '../context/LanguageProvider';
 import ModalPopup from '../components/ModalPopup';
 
 function MyApp({ Component, pageProps }) {
-  
+
   const [loading, setLoading] = useState(false);
-  const [isEng, setIsEng] = useState(true);
-  
-    // modal functions start
 
-    const [show, setShow] = useState(false);
+  // modal functions start
 
-    const showModal = (event) => {
-        setShow(!show);
-    }
-  
-    const closeModal = (e) => setShow(false);
-  
-    // modal functions end
+  const [show, setShow] = useState(true);
+  const closeModal = (e) => setShow(false);
+
+  // modal functions end
 
   Router.events.on('routeChangeStart', (url) => {
     setLoading(true);
     NProgress.start();
   });
 
-  Router.events.on('routeChangeComplete', (url)=> {
+  Router.events.on('routeChangeComplete', (url) => {
     setLoading(false);
     NProgress.done();
   });
-  
+
   return (
     <LanguageProvider>
       <TextContext.Provider value={text}>
-      <ModalPopup show={show} closeModal={closeModal}/>
+        <ModalPopup show={show} closeModal={closeModal} />
         <Layout loading={loading}>
-            <Component {...pageProps} />
+          <Component {...pageProps} />
         </Layout>
       </TextContext.Provider>
     </LanguageProvider>
