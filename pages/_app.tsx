@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
     setLoading(false);
     NProgress.done();
   });
-
+/*
   return (
     <LanguageProvider>
       <TextContext.Provider value={text}>
@@ -38,6 +38,10 @@ function MyApp({ Component, pageProps }) {
         </Layout>
       </TextContext.Provider>
     </LanguageProvider>
+  ) */
+  
+  return (
+    <h1>Error: Not Found</h1>
   )
 }
 
