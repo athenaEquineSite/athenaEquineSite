@@ -7,6 +7,7 @@ import { TextContext } from '../context/TextContext';
 import text from '../utils/textContent.json';
 import { LanguageProvider } from '../context/LanguageProvider';
 import ModalPopup from '../components/ModalPopup';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
 
@@ -31,6 +32,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <LanguageProvider>
+      <Script 
+        id="Adsense-id"
+        data-ad-client="ca-pub-4993841654681921"
+        async strategy='beforeInteractive'
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <TextContext.Provider value={text}>
         <ModalPopup show={show} closeModal={closeModal} />
         <Layout loading={loading}>
